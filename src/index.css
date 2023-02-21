@@ -3,6 +3,8 @@
   --secondary-color: rgb(189, 0, 24);
   --background-color: white;
   --primary-font: "Open Sans", "Helvetica Neue", sans-serif;
+  --font-color-primary: rgb(40, 40, 40);
+  --font-color-secondary: rgb(165, 165, 165);
 }
 
 body {
