@@ -45,3 +45,14 @@
   color: #fff;
   border-radius: 0 3px 3px 0;
 }
+
+@media only screen and (min-width: 1232px) {
+  .searchDiv {
+    width: 50vw;
+    margin-top: 1.5em;
+  }
+
+  .search-button:hover {
+    cursor: pointer;
+  }
+}

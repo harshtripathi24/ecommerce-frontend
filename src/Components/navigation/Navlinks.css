@@ -1,9 +1,12 @@
 .navLinks {
   color: var(--font-color-primary);
+  margin-bottom: 2em;
 }
 
 .navLinks li {
   list-style: none;
+  border-bottom: 1px var(--primary-color) solid;
+  padding-bottom: 10px;
 }
 
 .headerLink a {
@@ -33,6 +36,7 @@
 
 .child-list a {
   font-weight: normal;
+  line-height: 2;
 }
 
 .child-list a:hover {

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaHeadphonesAlt } from "react-icons/fa";
 
 import Search from "./Search";
 import MainNaviagtion from "./navigation/MainNaviagtion";
+import DeskNav from "./navigation/DeskNav";
 
 import logo from "../Utilities/Images/header-logo.png";
 
@@ -11,6 +12,19 @@ import "./header.css";
 
 const Header = () => {
   const [cartItem, setCartItem] = useState(0);
+  const [windoWidth, setWindoWidth] = useState(window.innerWidth);
+
+  const detectWindowWidth = () => {
+    setWindoWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", detectWindowWidth);
+
+    return () => {
+      window.removeEventListener("resize ", detectWindowWidth);
+    };
+  }, [windoWidth]);
 
   return (
     <div className="mainHeader">
@@ -21,6 +35,11 @@ const Header = () => {
             <img src={logo} alt="Logo" />
           </div>
         </div>
+
+        <div className="middleHeader">
+          {windoWidth > 1232 ? <Search /> : ""}
+        </div>
+
         <div className="rightHeader">
           <div className="signin-div">
             <a href="http://">
@@ -36,14 +55,9 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Search />
-      <div className="customerSupport">
-        <FaHeadphonesAlt className="support-icon" />
-        <div className="support-text">
-          <span className="support">Free Support 24x7</span>
-          <p className="support-number">+91-830-430-3001</p>
-        </div>
-      </div>
+      {windoWidth < 1232 ? <Search /> : ""}
+
+      <DeskNav />
     </div>
   );
 };

@@ -1,0 +1,146 @@
+.deskNav {
+  width: 86vw;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 2px blue solid; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftNav {
+  display: flex;
+}
+
+.category-button {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 20px 12px 20px;
+  position: relative;
+  border-radius: 6px;
+  border: none;
+  margin: 3px;
+  width: 300px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.category-button span {
+  font-style: normal;
+  /* margin-bottom: 10px; */
+  line-height: 28px;
+  margin-right: 5px;
+  text-transform: none;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.navIcon-hamburger {
+  font-weight: 900;
+  font-size: large;
+  margin-right: 5px;
+  /* margin-top: 3px; */
+  /* margin-bottom: none; */
+  font-variant: normal;
+  text-rendering: auto;
+}
+
+.navIcon-down {
+  font-size: large;
+}
+
+.category-button:hover {
+  cursor: pointer;
+}
+
+.customerSupport {
+  display: flex;
+  /* border: 2px red solid; */
+  padding: 0px;
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  display: flex;
+}
+
+.support-text {
+  /* border: 1px blue solid; */
+  height: 90%;
+  width: 90%;
+  margin-left: 3px;
+  padding-top: 4px;
+  margin-top: 4px;
+  height: 50px;
+  line-height: 0.5;
+}
+
+.support-text span {
+  font-weight: 400;
+  color: var(--font-color-secondary);
+  font-family: var(--primary-font);
+
+  line-height: 0;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 5px;
+  /* border: 1px purple solid; */
+}
+
+.support-number {
+  font-weight: bold;
+  margin: none;
+  font-size: large;
+  line-height: 0;
+}
+
+.support-icon {
+  color: var(--primary-color);
+  font-size: 2.7em;
+  margin: 3px;
+  margin-top: none;
+  /* border: 0.5px solid blue; */
+  padding-top: 0;
+}
+
+.rightNav {
+  /* border: orangered 1px solid; */
+  height: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.rightNav a {
+  /* margin: 1em; */
+  font-weight: bold;
+  padding: 15px 15px 15px 15px;
+  color: var(--font-color-primary);
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.rightNav a:hover {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.drop-menu {
+  color: blue;
+  border: 2px red solid;
+  background-color: yellow;
+  display: relative;
+}
+
+.navBox {
+  z-index: 100;
+  position: absolute;
+  /* border: 2px blue solid; */
+  width: 300px;
+}
+
+.hideNav {
+  display: none;
+}
