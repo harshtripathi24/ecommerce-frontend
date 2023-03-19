@@ -1,0 +1,34 @@
+.nav-button {
+  width: 40px;
+  /* border: grey 2px solid; */
+}
+
+.nav-button button {
+  background-color: var(--background-color);
+
+  border-right: none;
+  border-bottom: none;
+  border: 2px gainsboro solid;
+  box-shadow: none;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: large;
+  font-weight: bold;
+  margin: 5px;
+  margin-right: 1px;
+  margin-top: 15px;
+}
+
+.nav-button button:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1232px) {
+  .nav-button {
+    display: none;
+  }
+}

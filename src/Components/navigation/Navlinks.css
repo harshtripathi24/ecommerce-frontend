@@ -1,0 +1,49 @@
+.navLinks {
+  color: var(--font-color-primary);
+  margin-bottom: 2em;
+}
+
+.navLinks li {
+  list-style: none;
+  border-bottom: 1px var(--primary-color) solid;
+  padding-bottom: 10px;
+}
+
+.headerLink a {
+  color: var(--font-color-primary);
+  font-weight: bold;
+}
+
+.headerLink li {
+  list-style: none;
+}
+
+.headerLink button {
+  margin-left: 15px;
+  padding: none;
+  width: 35px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 9px;
+}
+
+.headerLink button:hover {
+  cursor: pointer;
+  background-color: var(--primary-hover-color);
+}
+
+.child-list a {
+  font-weight: normal;
+  line-height: 2;
+}
+
+.child-list a:hover {
+  color: var(--primary-color);
+}
+
+.headerLink #down-icon {
+  font-weight: bold;
+  margin-top: 5px;
+}
