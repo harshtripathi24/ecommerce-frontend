@@ -30,7 +30,7 @@
   line-height: 28px;
   margin-right: 5px;
   text-transform: none;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   display: inline-block;
 }
@@ -125,13 +125,6 @@
 .rightNav a:hover {
   color: var(--primary-color);
   font-weight: 500;
-}
-
-.drop-menu {
-  color: blue;
-  border: 2px red solid;
-  background-color: yellow;
-  display: relative;
 }
 
 .navBox {

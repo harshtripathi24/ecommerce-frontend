@@ -1,17 +1,32 @@
 .navLinks {
   color: var(--font-color-primary);
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
+  /* width: 100%; */
+  margin-left: none;
 }
 
 .navLinks li {
   list-style: none;
   border-bottom: 1px var(--primary-color) solid;
   padding-bottom: 10px;
+  margin: 1em;
+  display: flex;
+  /* width: 100%; */
+}
+
+.heading-link {
+  /* display: flex; */
+}
+
+.headerLink {
+  padding: 0;
 }
 
 .headerLink a {
   color: var(--font-color-primary);
   font-weight: bold;
+
+  width: 90%;
 }
 
 .headerLink li {
@@ -19,10 +34,10 @@
 }
 
 .headerLink button {
-  margin-left: 15px;
   padding: none;
-  width: 35px;
+  width: 50px;
   background-color: var(--primary-color);
+
   color: white;
   font-weight: bold;
   border: none;
@@ -31,7 +46,11 @@
 
 .headerLink button:hover {
   cursor: pointer;
-  background-color: var(--primary-hover-color);
+  /* background-color: var(--primary-hover-color); */
+}
+
+.headerLink button:active {
+  background-color: var(--primary-color);
 }
 
 .child-list a {

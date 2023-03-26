@@ -6,6 +6,8 @@
   --font-color-primary: rgb(40, 40, 40);
   --font-color-secondary: rgb(165, 165, 165);
   --primary-hover-color: rgb(33, 34, 37);
+
+  overflow-x: hidden;
 }
 
 body {
@@ -13,8 +15,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
 }
 
 code {
