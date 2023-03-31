@@ -103,9 +103,13 @@ const NavLinks = () => {
   if (windoWidth > 1232) {
     return (
       <>
-        {ProductLinks.map((category, index) => {
-          return <SingleNavLink key={category.id} {...category} />;
-        })}
+        <div className="navLinks">
+          <ul>
+            {ProductLinks.map((category, index) => {
+              return <SingleNavLink key={category.id} {...category} />;
+            })}
+          </ul>
+        </div>
       </>
     );
   } else {
@@ -115,11 +119,13 @@ const NavLinks = () => {
           return (
             <div className="navLinks" key={index}>
               <ul>
-                <li className="headerLink">
-                  <a href="http://">{category.categoryName}</a>
-                  <button className="expand">
-                    <GoChevronDown id="down-icon" />
-                  </button>
+                <ul className="headerLink">
+                  <li className="heading-Link">
+                    <a href="http://">{category.categoryName}</a>
+                    <button className="expand">
+                      <GoChevronDown id="down-icon" />
+                    </button>
+                  </li>
 
                   {category.childOptions.map((childCategory, index) => {
                     return (
@@ -130,7 +136,7 @@ const NavLinks = () => {
                       </ul>
                     );
                   })}
-                </li>
+                </ul>
               </ul>
             </div>
           );
