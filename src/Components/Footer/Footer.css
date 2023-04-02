@@ -1,0 +1,165 @@
+.mainFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addressSection {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  margin-right: 20px;
+}
+
+.addressSection img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 17px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--font-color-primary);
+  opacity: 0.7;
+  font-family: var(--primary-font);
+}
+
+.infoHeading {
+  font-size: 17px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--font-color-primary);
+  font-family: var(--primary-font);
+}
+
+.infoText {
+  color: var(--font-color-primary);
+  opacity: 0.7;
+  font-family: var(--primary-font);
+}
+
+.menus {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.menu {
+  font-size: 19px;
+  margin-bottom: 19px;
+  font-weight: 500;
+  color: var(--font-color-primary);
+  font-family: var(--primary-font);
+}
+
+.menuItems div {
+  opacity: 0.7;
+  font-size: 17px;
+  margin-top: 9px;
+}
+
+.joinNewsLetter {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.joinNewsLetterInput {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid var(--font-color-secondary);
+  color: var(--font-color-primary);
+  opacity: 0.7;
+  font-size: 16px;
+  font-family: var(--primary-font);
+  padding: 0 10px;
+}
+
+.joinNewsLetterButton {
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.stayConnectedText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.socialMediaIcons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialMediaIcon:hover {
+  color: rgb(78, 78, 78);
+}
+
+.lowerFooter {
+  margin-top: 20px;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(78, 78, 78);
+}
+
+@media screen and (max-width: 768px) {
+  .mainFooter {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addressSection {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 250px;
+  }
+
+  .joinNewsLetter {
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .menuItems div {
+    font-size: 12px;
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+
+  .infoHeading {
+    font-size: 15px;
+  }
+
+  .infoText {
+    font-size: 12px;
+  }
+
+  .newsLetter {
+    text-align: center;
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .lowerFooter {
+    height: 50px;
+    font-size: 10px;
+  }
+}
