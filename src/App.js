@@ -1,14 +1,15 @@
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header";
+
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <>
       <Header />
-      <div style={{ minHeight: "100vh" }}>
-        
-      </div>
-      <Footer/>
+      <Home />
+      <div style={{ minHeight: "100vh" }}></div>
+      <Footer />
     </>
   );
 }
