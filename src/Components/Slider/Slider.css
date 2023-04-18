@@ -1,14 +1,15 @@
 .container-slider {
   max-width: 700px;
-  height: 500px;
+  height: 300px;
   margin: 100px auto 0;
   position: relative;
+  margin-top: 1px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 700px) {
   .container-slider {
-    margin: 100px 10px 0;
+    margin: 20px 10px 0;
   }
 }
 .slide {
@@ -28,8 +29,8 @@
 }
 
 .btn-slide {
-  width: 60px;
-  height: 60px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #f1f1f1;
   border: 1px solid rgba(34, 34, 34, 0.287);
@@ -41,8 +42,8 @@
 }
 
 .btn-slide img {
-  width: 25px;
-  height: 25px;
+  width: 10px;
+  height: 10px;
   pointer-events: none;
 }
 .prev {
@@ -64,13 +65,13 @@
   display: flex;
 }
 .dot {
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 3px solid #f1f1f1;
+  border: 1px solid var(--font-color-secondary);
   margin: 0 5px;
   background: #f1f1f1;
 }
 .dot.active {
-  background: rgb(32, 32, 32);
+  background: var(--primary-color);
 }
