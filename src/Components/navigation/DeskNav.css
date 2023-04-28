@@ -132,6 +132,7 @@
   position: absolute;
   /* border: 2px blue solid; */
   width: 300px;
+  background-color: var(--background-color);
 }
 
 .hideNav {

@@ -32,7 +32,7 @@ const deskNavlinks = [
 
 const DeskNav = () => {
   const [windoWidth, setWindoWidth] = useState(window.innerWidth);
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(true);
 
   const navHandler = () => {
     setIsNavOpen(!isNavOpen);

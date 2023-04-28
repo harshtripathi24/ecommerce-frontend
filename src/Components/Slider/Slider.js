@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Slider.css";
 import BtnSlider from "./BtnSlider";
 import dataSlider from "./DataSlider";
@@ -26,6 +26,14 @@ const Slider = () => {
     setSlideIndex(index);
   };
 
+  useEffect(() => {
+    let slider = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(slider);
+  }, [nextSlide]);
+
   return (
     <div className="container-slider">
       {dataSlider.map((obj, index) => {
@@ -35,11 +43,25 @@ const Slider = () => {
             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
           >
             <img src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`} />
+
+            <div className="overlay-div" key={obj.id}>
+              {obj.overlayText ? <p>{obj.overlayText}</p> : ""}
+
+              {obj.btnText ? (
+                <button className="overlay-button">{obj.btnText}</button>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
         );
       })}
       <BtnSlider moveSlide={nextSlide} direction={"next"} />
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+
+      {dataSlider.map((obj, index) => {
+        return <div></div>;
+      })}
 
       <div className="container-dots">
         {Array.from({ length: 5 }).map((item, index) => (
