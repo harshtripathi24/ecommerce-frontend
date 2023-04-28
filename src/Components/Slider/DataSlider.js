@@ -26,8 +26,8 @@ const dataSlider = [
     id: uuidv4(),
     title: "Lorem ipsum",
     subTitle: "Lorem",
-    overlayText: "Your Prince is waiting for you in the next Book",
-    btnText: "Order Now",
+    overlayText: "Your Prince is wating for you in the next Book",
+    btnText: "Buy Now",
   },
   {
     id: uuidv4(),
