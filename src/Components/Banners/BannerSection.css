@@ -2,14 +2,16 @@
   /* border: 1px green solid; */
   display: flex;
   flex-direction: column;
+
   margin: 10px 0px;
 }
 
 @media only screen and (min-width: 612px) {
   .banner-container {
     flex-direction: row;
-    width: 90%;
-    /* border: 2px blue solid;git */
+    width: 91%;
+    border: 2px blue solid;
     margin: 10px auto;
+    justify-content: space-around;
   }
 }
