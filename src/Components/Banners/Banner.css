@@ -1,0 +1,23 @@
+.banner {
+  width: 95%;
+
+  margin: 10px auto;
+}
+
+.banner img {
+  width: 100%;
+  margin-left: auto;
+}
+
+.banner img:hover {
+  opacity: 60%;
+}
+
+@media only screen and (min-width: 612px) {
+  .banner {
+    width: 60%;
+    /* border: 2px blue solid; */
+    margin: 10px 10px;
+    max-width: 650px;
+  }
+}
