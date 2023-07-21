@@ -54,7 +54,14 @@
   font-family: var(--primary-font);
 }
 
-.menuItems div {
+.menuItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItems a {
+  color: var(--font-color-primary);
+  text-decoration: none;
   opacity: 0.7;
   font-size: 17px;
   margin-top: 9px;
@@ -88,6 +95,10 @@
   font-weight: 600;
 }
 
+.joinNewsLetterButton:hover {
+  cursor: pointer;
+}
+
 .stayConnectedText {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -99,13 +110,14 @@
 }
 
 .socialMediaIcon:hover {
-  color: rgb(78, 78, 78);
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
 .lowerFooter {
   margin-top: 20px;
   width: 100%;
-  height: 70px;
+  height: 60px;
   text-align: center;
   display: flex;
   justify-content: center;

@@ -36,22 +36,22 @@ const Footer = () => {
           <div className="mainMenu">
             <div className="menu">Main Menu</div>
             <div className="menuItems">
-              <div>Home</div>
-              <div>Catalog</div>
-              <div>Specials</div>
-              <div>Pages</div>
-              <div>Product Pages</div>
+              <a href="/">Home</a>
+              <a href="/">Catalogs</a>
+              <a href="/">Specials</a>
+              <a href="/">Pages</a>
+              <a href="/">Product Page</a>
             </div>
           </div>
 
           <div className="mainMenu">
             <div className="menu">Other Links</div>
             <div className="menuItems">
-              <div>Privacy Policy</div>
-              <div>Terms and Conditions</div>
-              <div>Something</div>
-              <div>Something</div>
-              <div>Something</div>
+              <a href="/">Term and Conditions </a>
+              <a href="/">Privacy Policy</a>
+              <a href="/">Something</a>
+              <a href="/">something</a>
+              <a href="/">Something</a>
             </div>
           </div>
         </div>
