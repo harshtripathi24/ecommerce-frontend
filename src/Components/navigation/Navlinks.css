@@ -24,7 +24,7 @@
 
 .headerLink a {
   color: var(--font-color-primary);
-  font-weight: bold;
+  font-weight: 500;
 
   width: 90%;
 }

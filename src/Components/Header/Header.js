@@ -3,10 +3,10 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaHeadphonesAlt } from "react-icons/fa";
 
 import Search from "./Search";
-import MainNaviagtion from "./navigation/MainNaviagtion";
-import DeskNav from "./navigation/DeskNav";
+import MainNaviagtion from "../navigation/MainNaviagtion";
+import DeskNav from "../navigation/DeskNav";
 
-import logo from "../Utilities/Images/header-logo.png";
+import logo from "../../Utilities/Images/header-logo.png";
 
 import "./header.css";
 

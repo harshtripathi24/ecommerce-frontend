@@ -3,6 +3,10 @@
   width: 100vw;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   /* border: green 2px solid; */
   width: 100vw;
