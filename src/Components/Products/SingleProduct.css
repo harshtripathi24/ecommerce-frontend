@@ -14,7 +14,7 @@
 
 .boxBorder {
   position: relative;
-  border-right: 0.5px rgb(220, 220, 226) solid;
+  /* border: 0.5px rgb(220, 220, 226) solid; */
   width: 100%;
 
   /* background-color: blue; */

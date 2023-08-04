@@ -10,7 +10,7 @@ import banner1 from "../Utilities/Images/Banners/banner1.jpeg";
 import banner2 from "../Utilities/Images/Banners/banner2.jpeg";
 
 import ProductsSection from "../Components/Products/ProductsSection";
-
+import "./Home.css";
 const Home = () => {
   return (
     <div>
@@ -20,7 +20,9 @@ const Home = () => {
         <Banner link="http://" imgLink={banner1} imgName="Available Book" />
         <Banner link="http://" imgLink={banner2} imgName="Discount 40% Book" />
       </BannerSection>
-      <ProductsSection />
+      <div className="marginDiv">
+        <ProductsSection />
+      </div>
     </div>
   );
 };
