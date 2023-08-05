@@ -5,7 +5,7 @@
   padding-top: 10px;
   z-index: 100;
   height: fit-content;
-  width: 70%;
+  width: fit-content;
   background-color: white;
   box-shadow: 0 2px 8px rgb(0, 0, 0, 0.26);
 }

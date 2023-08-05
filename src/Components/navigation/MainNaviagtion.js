@@ -21,7 +21,11 @@ const MainNaviagtion = () => {
     <>
       {isDrawerIsOpen && <BackDrop onClick={closeDrawer} />}
       {isDrawerIsOpen && (
-        <SideDrawer onClick={closeDrawer} show={isDrawerIsOpen}>
+        <SideDrawer
+          className="sideDrawer"
+          onClick={closeDrawer}
+          show={isDrawerIsOpen}
+        >
           <nav className="main-navigation__drawer-nav">
             <NavLinks />
           </nav>
