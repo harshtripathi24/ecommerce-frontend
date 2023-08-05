@@ -27,6 +27,10 @@
   cursor: pointer;
 }
 
+.sideDrawer {
+  width: fit-content;
+}
+
 /* @media only screen and (min-width: 1232px) {
   .nav-button {
     display: none;
