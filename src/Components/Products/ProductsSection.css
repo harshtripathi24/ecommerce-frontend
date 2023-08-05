@@ -1,0 +1,156 @@
+.productSection {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* border: 1px magenta solid; */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selectCategoryBox {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 2px red solid; */
+  flex-direction: column;
+}
+
+.categories {
+  list-style: none;
+  display: inline-block;
+
+  vertical-align: top;
+  position: relative;
+  border: 2px solid #eeeeee;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+  /* border: 2px solid blue; */
+}
+
+.categories li {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+  /* border: 2px solid var(--primary-color); */
+}
+
+.categories li::before {
+  content: "";
+  border-top: 11px solid var(--primary-color);
+  border-bottom: 11px solid transparent;
+  border-left: 9px solid transparent;
+  width: 100%;
+  border-right: 9px solid transparent;
+  width: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -21px;
+  margin: auto;
+  z-index: 2;
+  opacity: 0;
+}
+
+.categories li a {
+  font-size: 15px;
+  color: var(--font-color-primary);
+  line-height: 48px;
+  text-transform: capitalize;
+  font-weight: 700;
+  cursor: pointer;
+  /* display: inline-block; */
+  display: block;
+  vertical-align: top;
+  padding: 0 35px;
+  background: var(--background-color);
+  position: relative;
+}
+
+.categories a::before {
+  content: "";
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  position: absolute;
+  border: 2px solid transparent;
+  z-index: 1;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.categories li:not(:last-child) a:after {
+  content: "";
+  width: 1px;
+  height: 28px;
+  background: var(--background-color);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.categories li::after {
+  content: "";
+  border-top: 9px solid var(--background-color);
+  border-bottom: 8px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  width: 1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  margin: auto;
+  z-index: 3;
+  opacity: 0;
+}
+
+.categories li a:hover {
+  color: var(--primary-color);
+}
+
+.categories .active::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.categories .active::after {
+  opacity: 1;
+}
+
+.categories .active a {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .selectCategoryBox {
+    flex-direction: row;
+  }
+
+  .categories {
+    display: flex;
+  }
+  .categories li a {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .products {
+    justify-content: center;
+    /* border: 1px magenta solid; */
+  }
+}

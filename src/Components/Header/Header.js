@@ -30,7 +30,7 @@ const Header = () => {
     <div className="mainHeader">
       <div className="header">
         <div className="leftHeader">
-          <MainNaviagtion />
+          {windoWidth < 1232 ? <MainNaviagtion /> : ""}
           <div className="logo-div">
             <img src={logo} alt="Logo" />
           </div>
