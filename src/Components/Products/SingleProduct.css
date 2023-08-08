@@ -159,3 +159,7 @@
   color: var(--primary-color);
   cursor: pointer;
 }
+
+.animate__animated.animate__zoomIn {
+  --animate-duration: 0.5s;
+}

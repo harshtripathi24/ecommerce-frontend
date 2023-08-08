@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Products from "./ProductData";
 import SingleProduct from "./SingleProduct";
+
 import "./ProductsSection.css";
 const ProductsSection = () => {
-  const [isActive, setIsActive] = useState(null);
+  const [isActive, setIsActive] = useState(1);
+  const [category, setCategory] = useState("Featured Products");
+  const [products, setProducts] = useState(Products);
+
+  console.log(
+    Products.filter((product) => product.categoryName.includes(category))
+  );
+
+  useEffect(() => {
+    let tempProducts = Products.filter((product) =>
+      product.categoryName.includes(category)
+    );
+
+    setProducts(tempProducts);
+  }, [category]);
 
   let checkBorder = 0;
   return (
@@ -13,7 +28,10 @@ const ProductsSection = () => {
         <div className="selectCategoryBox">
           <ul className="categories">
             <li
-              onClick={() => setIsActive(1)}
+              onClick={() => {
+                setIsActive(1);
+                setCategory("Featured Products");
+              }}
               className={`${isActive === 1 ? "active" : ""}`}
             >
               <a>
@@ -21,7 +39,10 @@ const ProductsSection = () => {
               </a>
             </li>
             <li
-              onClick={() => setIsActive(2)}
+              onClick={() => {
+                setIsActive(2);
+                setCategory("New Arrivals");
+              }}
               className={`${isActive === 2 ? "active" : ""}`}
             >
               <a>
@@ -29,7 +50,10 @@ const ProductsSection = () => {
               </a>
             </li>
             <li
-              onClick={() => setIsActive(3)}
+              onClick={() => {
+                setIsActive(3);
+                setCategory("Most Viewed");
+              }}
               className={`${isActive === 3 ? "active" : ""}`}
             >
               <a>
@@ -39,11 +63,12 @@ const ProductsSection = () => {
           </ul>
         </div>
         <div className="products">
-          {Products.map((product) => {
+          {products.map((product) => {
             checkBorder++;
             return (
               <SingleProduct
                 id={product.pid}
+                key={product.pid}
                 product={product}
                 checkBorder={checkBorder}
               />
