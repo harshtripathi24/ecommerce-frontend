@@ -16,7 +16,7 @@ const SingleProduct = ({ product, checkBorder }) => {
   return (
     <>
       <div
-        className="product"
+        className=" animate__animated animate__zoomIn  product"
         onMouseEnter={() => handleIsVisible()}
         onMouseLeave={() => handleIsVisible()}
       >

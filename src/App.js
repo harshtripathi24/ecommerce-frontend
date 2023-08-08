@@ -2,6 +2,7 @@ import Footer from "./Components/Footer/Footer";
 
 import Header from "./Components/Header/Header";
 import Home from "./Pages/Home";
+import "animate.css";
 
 function App() {
   return (
