@@ -9,10 +9,6 @@ const ProductsSection = () => {
   const [category, setCategory] = useState("Featured Products");
   const [products, setProducts] = useState(Products);
 
-  console.log(
-    Products.filter((product) => product.categoryName.includes(category))
-  );
-
   useEffect(() => {
     let tempProducts = Products.filter((product) =>
       product.categoryName.includes(category)
