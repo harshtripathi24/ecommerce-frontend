@@ -21,7 +21,7 @@ const ProductDevisonSection = ({ sectionType, productIds, devisonTitle }) => {
       productIds.some((proId) => proId === product.pid)
     );
     setProducts(tempProducts);
-  });
+  }, []);
 
   return (
     <>

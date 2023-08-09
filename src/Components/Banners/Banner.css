@@ -15,9 +15,14 @@
 
 @media only screen and (min-width: 612px) {
   .banner {
-    width: 60%;
+    display: flex;
+    width: fit-content;
     /* border: 2px blue solid; */
     margin: 10px 10px;
     max-width: 650px;
+  }
+
+  .banner img {
+    height: 100%;
   }
 }
