@@ -49,6 +49,11 @@ const Home = () => {
         productIds={[20, 13, 14, 17, 11]}
         devisonTitle={"Trending Now"}
       />
+      <ProductDevisonSection
+        sectionType={1}
+        productIds={[21, 13, 4, 17, 18, 14]}
+        devisonTitle={"Only Few Left Hurry!!"}
+      />
     </div>
   );
 };
