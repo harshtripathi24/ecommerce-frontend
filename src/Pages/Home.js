@@ -47,7 +47,7 @@ const Home = () => {
         <Banner
           link="http://"
           imgLink={businessBanner}
-          imgName="Business Banner"
+          imgName="Business Book Banner "
         />
       </BannerSection>
       <ProductDevisonSection
