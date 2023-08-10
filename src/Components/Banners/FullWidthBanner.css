@@ -1,0 +1,14 @@
+.fullWidthBanner {
+  width: 100%;
+
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+
+.fullWidthBanner img {
+  width: 100%;
+}
+
+.fullWidthBanner img:hover {
+  opacity: 60%;
+}

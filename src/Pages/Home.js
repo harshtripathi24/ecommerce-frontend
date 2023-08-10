@@ -4,6 +4,7 @@ import Slider from "../Components/Slider/Slider";
 import PolicyBlocks from "../Components/PolicyBlocks/PolicyBlocks";
 import BannerSection from "../Components/Banners/BannerSection";
 import Banner from "../Components/Banners/Banner";
+import FullWidthBanner from "../Components/Banners/FullWidthBanner";
 
 // Images Import Section
 import banner1 from "../Utilities/Images/Banners/banner1.jpeg";
@@ -11,6 +12,7 @@ import banner2 from "../Utilities/Images/Banners/banner2.jpeg";
 import buy3banner from "../Utilities/Images/Banners/buy3Banner.png";
 import nightChildBanner from "../Utilities/Images/Banners/nightChildbanner.png";
 import businessBanner from "../Utilities/Images/Banners/businessBanner.png";
+import loveBookBanner from "../Utilities/Images/Banners/loveBookBanner.png";
 
 import ProductsSection from "../Components/Products/ProductsSection";
 
@@ -55,10 +57,16 @@ const Home = () => {
         productIds={[20, 13, 14, 17, 11]}
         devisonTitle={"Trending Now"}
       />
+
+      <FullWidthBanner
+        link="http://"
+        imgLink={loveBookBanner}
+        imgName="Love Book Banner "
+      />
       <ProductDevisonSection
-        sectionType={1}
-        productIds={[21, 13, 4, 17, 18, 14]}
-        devisonTitle={"Only Few Left Hurry!!"}
+        sectionType={2}
+        productIds={[12, 8, 19, 13, 20]}
+        devisonTitle={"Lovley Books"}
       />
     </div>
   );
