@@ -10,6 +10,7 @@ import banner1 from "../Utilities/Images/Banners/banner1.jpeg";
 import banner2 from "../Utilities/Images/Banners/banner2.jpeg";
 import buy3banner from "../Utilities/Images/Banners/buy3Banner.png";
 import nightChildBanner from "../Utilities/Images/Banners/nightChildbanner.png";
+import businessBanner from "../Utilities/Images/Banners/businessBanner.png";
 
 import ProductsSection from "../Components/Products/ProductsSection";
 
@@ -42,6 +43,11 @@ const Home = () => {
           link="http://"
           imgLink={nightChildBanner}
           imgName="Night Child Banner"
+        />
+        <Banner
+          link="http://"
+          imgLink={businessBanner}
+          imgName="Business Book Banner "
         />
       </BannerSection>
       <ProductDevisonSection
