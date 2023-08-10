@@ -17,6 +17,8 @@ import loveBookBanner from "../Utilities/Images/Banners/loveBookBanner.png";
 import ProductsSection from "../Components/Products/ProductsSection";
 
 import ProductDevisonSection from "../Components/Products/ProductDevisonSection";
+import ProductPublisherSection from "../Components/Products/productPublisherSection";
+
 import "./Home.css";
 const Home = () => {
   return (
@@ -68,6 +70,7 @@ const Home = () => {
         productIds={[12, 8, 19, 13, 20]}
         devisonTitle={"Lovley Books"}
       />
+      <ProductPublisherSection />
     </div>
   );
 };

@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <Home />
-      <div style={{ minHeight: "100vh" }}></div>
+      {/* <div style={{ minHeight: "100vh" }}></div> */}
       <Footer />
     </>
   );
