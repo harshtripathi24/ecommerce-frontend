@@ -167,7 +167,7 @@ const Products = [
   {
     pid: 19,
     categoryName: ["Fantasy", "Featured Products"],
-    author: "Issabel Ianez",
+    author: "Issabel Ibanez",
     name: "Woven in Moon",
     price: "185",
     fakePrice: "260",
@@ -176,7 +176,7 @@ const Products = [
   {
     pid: 20,
     categoryName: ["Thriller", "Featured Products"],
-    author: "james Nally",
+    author: "James Nally",
     name: "Dance with The Dead",
     price: "485",
     fakePrice: "560",

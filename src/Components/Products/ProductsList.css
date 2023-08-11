@@ -8,6 +8,14 @@
   margin-right: auto;
 }
 
+.toolTip {
+  z-index: 5;
+}
+
+.toolTip p {
+  font-size: 12px;
+}
+
 @media only screen and (max-width: 900px) {
   .products {
     justify-content: center;
