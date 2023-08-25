@@ -7,6 +7,8 @@ const Products = [
     price: "230",
     fakePrice: "450",
     img: "/Imgs/Products/psychologyOfMoney.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
 
   {
@@ -17,6 +19,8 @@ const Products = [
     price: "150",
     fakePrice: "251",
     img: "/Imgs/Products/eatThatFrog.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 3,
@@ -26,6 +30,8 @@ const Products = [
     price: "235",
     fakePrice: "495",
     img: "/Imgs/Products/thinkAndGrowRich.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 4,
@@ -35,6 +41,8 @@ const Products = [
     price: "230",
     fakePrice: "450",
     img: "/Imgs/Products/howtoWInFriends.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 5,
@@ -44,6 +52,8 @@ const Products = [
     price: "300",
     fakePrice: "500",
     img: "/Imgs/Products/thinkingFastAndSlow.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 6,
@@ -53,6 +63,8 @@ const Products = [
     price: "399",
     fakePrice: "699",
     img: "/Imgs/Products/range.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 7,
@@ -62,6 +74,8 @@ const Products = [
     price: "159",
     fakePrice: "230",
     img: "/Imgs/Products/itEndsWithUS.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 8,
@@ -71,6 +85,8 @@ const Products = [
     price: "229",
     fakePrice: "435",
     img: "/Imgs/Products/loveUnscripted.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 9,
@@ -80,6 +96,8 @@ const Products = [
     price: "230",
     fakePrice: "450",
     img: "/Imgs/Products/blackForest.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 10,
@@ -89,6 +107,8 @@ const Products = [
     price: "260",
     fakePrice: "450",
     img: "/Imgs/Products/blackwing.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 11,
@@ -98,6 +118,8 @@ const Products = [
     price: "290",
     fakePrice: "550",
     img: "/Imgs/Products/heritage.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 12,
@@ -107,6 +129,8 @@ const Products = [
     price: "190",
     fakePrice: "250",
     img: "/Imgs/Products/houseOfFuries.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
 
   {
@@ -117,6 +141,8 @@ const Products = [
     price: "350",
     fakePrice: "450",
     img: "/Imgs/Products/persuedByADragon.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
 
   {
@@ -127,6 +153,8 @@ const Products = [
     price: "385",
     fakePrice: "460",
     img: "/Imgs/Products/secretAndLies.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 15,
@@ -136,6 +164,8 @@ const Products = [
     price: "285",
     fakePrice: "360",
     img: "/Imgs/Products/shadowLand.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 16,
@@ -145,6 +175,8 @@ const Products = [
     price: "485",
     fakePrice: "560",
     img: "/Imgs/Products/theChaosOfStars.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 17,
@@ -154,6 +186,8 @@ const Products = [
     price: "385",
     fakePrice: "460",
     img: "/Imgs/Products/theLastChanceHotel.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 18,
@@ -163,6 +197,8 @@ const Products = [
     price: "485",
     fakePrice: "560",
     img: "/Imgs/Products/thSleepWalkers.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 19,
@@ -172,6 +208,8 @@ const Products = [
     price: "185",
     fakePrice: "260",
     img: "/Imgs/Products/wovenInMoonLight.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 20,
@@ -181,6 +219,8 @@ const Products = [
     price: "485",
     fakePrice: "560",
     img: "/Imgs/Products/danceWithTheDead.jpg",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
 ];
 

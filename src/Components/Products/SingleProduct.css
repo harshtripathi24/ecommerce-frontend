@@ -67,14 +67,14 @@
 
 .productImage {
   width: 65%;
-  min-height: 240px;
+  height: 240px;
 
   box-shadow: 0 3px 5px #00000026;
 }
 
 .priceDiv {
   /* border: 1px red solid; */
-  width: 55%;
+  width: 60%;
   /* height: 40px; */
   display: flex;
   flex-direction: row;

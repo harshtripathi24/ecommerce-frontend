@@ -4,6 +4,8 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+  const [product, setProduct] = useState({});
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -12,6 +14,13 @@ const AppProvider = ({ children }) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  const openQuickView = () => {
+    setIsQuickViewOpen(true);
+    console.log("QuickView Opened");
+  };
+  const closeQuickView = () => {
+    setIsQuickViewOpen(false);
+  };
 
   return (
     <AppContext.Provider
@@ -19,6 +28,11 @@ const AppProvider = ({ children }) => {
         isModalOpen,
         openModal,
         closeModal,
+        isQuickViewOpen,
+        openQuickView,
+        closeQuickView,
+        product,
+        setProduct,
       }}
     >
       {children}

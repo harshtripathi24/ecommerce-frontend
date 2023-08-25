@@ -5,17 +5,24 @@ import { FaShoppingBasket, FaEye } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
 import { BiShuffle } from "react-icons/bi";
 
-import { AppContext, useGlobalContext } from "../../Utilities/Context/Context";
+import { useGlobalContext } from "../../Utilities/Context/Context";
+import PriceIcon from "../../Utilities/Smaller Component/PriceIcon";
 
 import "./SingleProduct.css";
 const SingleProduct = ({ product, checkBorder }) => {
   const [isVisible, setIsVisble] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const { openModal } = useGlobalContext();
+  const { openModal, isQuickViewOpen, openQuickView, setProduct } =
+    useGlobalContext();
 
   const handleIsVisible = (e) => {
     setIsVisble(!isVisible);
+  };
+
+  const handleQuickView = () => {
+    setProduct(product);
+    openQuickView();
+    openModal();
   };
 
   return (
@@ -37,8 +44,14 @@ const SingleProduct = ({ product, checkBorder }) => {
               alt={product.name}
             />
             <div className="priceDiv">
-              <p className="realPrice"> ${product.price}</p>
-              <p className="fakePrice">${product.fakePrice}</p>
+              <p className="realPrice">
+                <PriceIcon />
+                {product.price}
+              </p>
+              <p className="fakePrice">
+                <PriceIcon />
+                {product.fakePrice}
+              </p>
               <p className="discountPercent">-50%</p>
             </div>
           </div>
@@ -57,7 +70,7 @@ const SingleProduct = ({ product, checkBorder }) => {
           <button
             className="quickViewBTN"
             data-tooltip-id="tool-tip-quickView"
-            onClick={() => openModal()}
+            onClick={() => handleQuickView()}
           >
             <FaEye />
           </button>

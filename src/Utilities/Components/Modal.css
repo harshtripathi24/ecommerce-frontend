@@ -19,19 +19,21 @@
 .modal-container {
   background: var(--background-color);
   border-radius: 3px;
-  width: 90vw;
-  height: 30vh;
+  width: fit-content;
+  height: fit-content;
   max-width: 1170px;
   text-align: center;
   display: grid;
   place-items: center;
   position: relative;
+  padding: 15px;
+  margin-bottom: 115px;
 }
 .close-modal-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: transparent;
   border-color: transparent;
   color: var(--font-color-seccondary);
