@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ProductQucikView from "../../Components/Products/ProductQucikView";
+import LoginModal from "./LoginModal";
 import { useGlobalContext } from "../Context/Context";
 import "./ModalContent.css";
 
 const ModalContent = () => {
-  const { isQuickViewOpen } = useGlobalContext();
+  const {
+    isQuickViewOpen,
+    closeQuickView,
+    isLoginModalOpen,
+    closeLoginModal,
+    isModalOpen,
+  } = useGlobalContext();
 
-  return <>{isQuickViewOpen && <ProductQucikView />}</>;
+  // useEffect(() => {
+  //   if (!isModalOpen) {
+  //     closeQuickView();
+  //     closeLoginModal();
+  //   }
+  // }, [isModalOpen]);
+
+  return (
+    <>
+      {isQuickViewOpen && <ProductQucikView />}
+      {isLoginModalOpen && <LoginModal />}
+    </>
+  );
 };
 
 export default ModalContent;

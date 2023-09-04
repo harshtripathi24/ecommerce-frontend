@@ -12,8 +12,13 @@ import "./SingleProduct.css";
 const SingleProduct = ({ product, checkBorder }) => {
   const [isVisible, setIsVisble] = useState(false);
 
-  const { openModal, isQuickViewOpen, openQuickView, setProduct } =
-    useGlobalContext();
+  const {
+    openModal,
+    isQuickViewOpen,
+    openQuickView,
+    setProduct,
+    openLoginModal,
+  } = useGlobalContext();
 
   const handleIsVisible = (e) => {
     setIsVisble(!isVisible);
@@ -22,6 +27,11 @@ const SingleProduct = ({ product, checkBorder }) => {
   const handleQuickView = () => {
     setProduct(product);
     openQuickView();
+    openModal();
+  };
+
+  const handleLoginModal = () => {
+    openLoginModal();
     openModal();
   };
 
@@ -58,10 +68,18 @@ const SingleProduct = ({ product, checkBorder }) => {
         </a>
 
         <div className={`hoverDiv ${isVisible ? "visible" : "hidden"}`}>
-          <button className="CartBTN" data-tooltip-id="tool-tip-basket">
+          <button
+            className="CartBTN"
+            data-tooltip-id="tool-tip-basket"
+            onClick={() => handleLoginModal()}
+          >
             <FaShoppingBasket />
           </button>
-          <button className="wishListBTN" data-tooltip-id="tool-tip-wishList">
+          <button
+            className="wishListBTN"
+            data-tooltip-id="tool-tip-wishList"
+            onClick={() => handleLoginModal()}
+          >
             <AiFillHeart />
           </button>
           <button className="detailsBTN" data-tooltip-id="tool-tip-details">
