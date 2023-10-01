@@ -1,3 +1,5 @@
+const baseUrl = "/Imgs/Products/";
+
 const Products = [
   {
     pid: 1,
@@ -7,6 +9,24 @@ const Products = [
     price: "230",
     fakePrice: "450",
     img: "/Imgs/Products/psychologyOfMoney.jpg",
+    imgs: [
+      `${baseUrl}psychologyOfMoney.webp`,
+      `${baseUrl}psychologyOfMoney2.webp`,
+      `${baseUrl}psychologyOfMoney3.jpg`,
+      `${baseUrl}psychologyOfMoney4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -19,6 +39,24 @@ const Products = [
     price: "150",
     fakePrice: "251",
     img: "/Imgs/Products/eatThatFrog.jpg",
+    imgs: [
+      `${baseUrl}eatThatFrog.jpg`,
+      `${baseUrl}eatThatFrog2.jpg`,
+      `${baseUrl}eatThatFrog3.jpg`,
+      `${baseUrl}eatThatFrog4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -30,6 +68,24 @@ const Products = [
     price: "235",
     fakePrice: "495",
     img: "/Imgs/Products/thinkAndGrowRich.jpg",
+    imgs: [
+      `${baseUrl}thinkAndGrowRich.jpg`,
+      `${baseUrl}thinkAndGrowRich2.jpg`,
+      `${baseUrl}thinkAndGrowRich3.jpg`,
+      `${baseUrl}thinkAndGrowRich4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -41,6 +97,24 @@ const Products = [
     price: "230",
     fakePrice: "450",
     img: "/Imgs/Products/howtoWInFriends.jpg",
+    imgs: [
+      `${baseUrl}howtoWInFriends.jpg`,
+      `${baseUrl}howtoWInFriends2.jpg`,
+      `${baseUrl}howtoWInFriends3.jpg`,
+      `${baseUrl}howtoWInFriends4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -52,6 +126,24 @@ const Products = [
     price: "300",
     fakePrice: "500",
     img: "/Imgs/Products/thinkingFastAndSlow.jpg",
+    imgs: [
+      `${baseUrl}thinkingFastAndSlow.jpg`,
+      `${baseUrl}thinkingFastAndSlow2.jpg`,
+      `${baseUrl}thinkingFastAndSlow3.jpg`,
+      `${baseUrl}thinkingFastAndSlow4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 3,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -63,6 +155,24 @@ const Products = [
     price: "399",
     fakePrice: "699",
     img: "/Imgs/Products/range.jpg",
+    imgs: [
+      `${baseUrl}range.jpg`,
+      `${baseUrl}range2.jpg`,
+      `${baseUrl}range3.jpg`,
+      `${baseUrl}range4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -74,6 +184,24 @@ const Products = [
     price: "159",
     fakePrice: "230",
     img: "/Imgs/Products/itEndsWithUS.jpg",
+    imgs: [
+      `${baseUrl}itEndsWithUS.jpg`,
+      `${baseUrl}itEndsWithUS2.webp`,
+      `${baseUrl}itEndsWithUS3.webp`,
+      `${baseUrl}itEndsWithUS4.webp`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -84,7 +212,25 @@ const Products = [
     name: "Love Unscripted",
     price: "229",
     fakePrice: "435",
-    img: "/Imgs/Products/loveUnscripted.jpg",
+    img: "/Imgs/Products/loveUnscripted.webp",
+    imgs: [
+      `${baseUrl}loveUnscripted.webp`,
+      `${baseUrl}loveUnscripted2.jpg`,
+      `${baseUrl}loveUnscripted3.jpg`,
+      `${baseUrl}loveUnscripted4.webp`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -96,6 +242,19 @@ const Products = [
     price: "230",
     fakePrice: "450",
     img: "/Imgs/Products/blackForest.jpg",
+    imgs: [`${baseUrl}blackForest.jpg`, `${baseUrl}blackForest2.jpg`],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -107,6 +266,24 @@ const Products = [
     price: "260",
     fakePrice: "450",
     img: "/Imgs/Products/blackwing.jpg",
+    imgs: [
+      `${baseUrl}blackwing.jpg`,
+      `${baseUrl}blackwing2.jpg`,
+      `${baseUrl}blackwing3.jpg`,
+      `${baseUrl}blackwing4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -118,6 +295,23 @@ const Products = [
     price: "290",
     fakePrice: "550",
     img: "/Imgs/Products/heritage.jpg",
+    imgs: [
+      `${baseUrl}heritage.jpg`,
+      `${baseUrl}heritage2.jpg`,
+      `${baseUrl}heritage.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -129,6 +323,24 @@ const Products = [
     price: "190",
     fakePrice: "250",
     img: "/Imgs/Products/houseOfFuries.jpg",
+    imgs: [
+      `${baseUrl}houseOfFuries.jpg`,
+      `${baseUrl}houseOfFuries2.jpg`,
+      `${baseUrl}houseOfFuries3.jpg`,
+      `${baseUrl}houseOfFuries4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -141,6 +353,19 @@ const Products = [
     price: "350",
     fakePrice: "450",
     img: "/Imgs/Products/persuedByADragon.jpg",
+    imgs: [`${baseUrl}persuedByADragon.jpg`, `${baseUrl}persuedByADragon.jpg`],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -153,17 +378,47 @@ const Products = [
     price: "385",
     fakePrice: "460",
     img: "/Imgs/Products/secretAndLies.jpg",
+    imgs: [
+      `${baseUrl}secretAndLies.jpg`,
+      `${baseUrl}secretAndLies2.jpg`,
+      `${baseUrl}secretAndLies.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 15,
     categoryName: ["Thriller", "New Arrivals"],
-    author: "B.P Griffith",
+    author: "B.B Griffith",
     name: "Shadow Land",
     price: "285",
     fakePrice: "360",
     img: "/Imgs/Products/shadowLand.jpg",
+    imgs: [`${baseUrl}shadowLand.jpg`],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -175,6 +430,24 @@ const Products = [
     price: "485",
     fakePrice: "560",
     img: "/Imgs/Products/theChaosOfStars.jpg",
+    imgs: [
+      `${baseUrl}theChaosOfStars.jpg`,
+      `${baseUrl}theChaosOfStars2.webp`,
+      `${baseUrl}theChaosOfStars3.jpg`,
+      `${baseUrl}theChaosOfStars4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -186,6 +459,24 @@ const Products = [
     price: "385",
     fakePrice: "460",
     img: "/Imgs/Products/theLastChanceHotel.jpg",
+    imgs: [
+      `${baseUrl}theLastChanceHotel.jpg`,
+      `${baseUrl}theLastChanceHotel2.jpg`,
+      `${baseUrl}theLastChanceHotel3.jpg`,
+      `${baseUrl}theLastChanceHotel4.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -196,18 +487,49 @@ const Products = [
     name: "The Sleep Walker",
     price: "485",
     fakePrice: "560",
-    img: "/Imgs/Products/thSleepWalkers.jpg",
+    img: "/Imgs/Products/theSleepWalkers.webp",
+    imgs: [`${baseUrl}theSleepWalkers.webp`, `${baseUrl}theSleepWalkers.webp`],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
   {
     pid: 19,
     categoryName: ["Fantasy", "Featured Products"],
-    author: "Issabel Ibanez",
+    author: "Isabel Ibanez",
     name: "Woven in Moon",
     price: "185",
     fakePrice: "260",
     img: "/Imgs/Products/wovenInMoonLight.jpg",
+    imgs: [
+      `${baseUrl}wovenInMoonLight.jpg`,
+      `${baseUrl}wovenInMoonLight2.webp`,
+      `${baseUrl}wovenInMoonLight3.webp`,
+      `${baseUrl}wovenInMoonLight4.webp`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },
@@ -219,6 +541,23 @@ const Products = [
     price: "485",
     fakePrice: "560",
     img: "/Imgs/Products/danceWithTheDead.jpg",
+    imgs: [
+      `${baseUrl}danceWithTheDead.jpg`,
+      `${baseUrl}danceWithTheDead2.jpg`,
+      `${baseUrl}danceWithTheDead3.jpg`,
+    ],
+
+    review: [
+      {
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+    ],
+
+    options: ["Hard Copy", "PDF", "Audio Book"],
+
+    publisher: "Jaico Publishing",
+    availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
   },

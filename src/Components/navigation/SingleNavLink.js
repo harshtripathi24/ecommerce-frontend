@@ -38,7 +38,7 @@ const SingleNavLink = ({ categoryName, childOptions }) => {
           >
             {childOptions.map((childCategory, index) => {
               return (
-                <div className="child-list">
+                <div key={index} className="child-list">
                   <a href="http://">{childCategory}</a>
                 </div>
               );

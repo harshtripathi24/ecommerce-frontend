@@ -4,9 +4,11 @@ import { FaShoppingBasket, FaEye } from "react-icons/fa";
 
 import { AiFillHeart } from "react-icons/ai";
 import { BiShuffle } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 import { useGlobalContext } from "../../Utilities/Context/Context";
 import PriceIcon from "../../Utilities/Smaller Component/PriceIcon";
+import { BiSolidStar } from "react-icons/bi";
 
 import "./SingleProduct.css";
 const SingleProduct = ({ product, checkBorder }) => {
@@ -42,7 +44,12 @@ const SingleProduct = ({ product, checkBorder }) => {
         onMouseEnter={() => handleIsVisible()}
         onMouseLeave={() => handleIsVisible()}
       >
-        <a className="productLink" href="http://" target="_blank">
+        <Link
+          className="productLink"
+          to={`${process.env.REACT_APP_BASE_URL}/product/${product.pid}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <p className="author">{product.author}</p>
           <h4 className="bookName">{product.name}</h4>
           <div
@@ -65,7 +72,7 @@ const SingleProduct = ({ product, checkBorder }) => {
               <p className="discountPercent">-50%</p>
             </div>
           </div>
-        </a>
+        </Link>
 
         <div className={`hoverDiv ${isVisible ? "visible" : "hidden"}`}>
           <button
@@ -82,9 +89,17 @@ const SingleProduct = ({ product, checkBorder }) => {
           >
             <AiFillHeart />
           </button>
-          <button className="detailsBTN" data-tooltip-id="tool-tip-details">
-            <BiShuffle />
-          </button>
+
+          <Link
+            to={`${process.env.REACT_APP_BASE_URL}/product/${product.pid}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="detailsBTN" data-tooltip-id="tool-tip-details">
+              <BiShuffle />
+            </button>
+          </Link>
+
           <button
             className="quickViewBTN"
             data-tooltip-id="tool-tip-quickView"

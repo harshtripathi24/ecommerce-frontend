@@ -22,7 +22,7 @@ import ProductPublisherSection from "../Components/Products/productPublisherSect
 import "./Home.css";
 const Home = () => {
   return (
-    <div>
+    <React.Fragment>
       <Slider />
       <PolicyBlocks />
       <BannerSection>
@@ -71,7 +71,7 @@ const Home = () => {
         devisonTitle={"Lovley Books"}
       />
       <ProductPublisherSection />
-    </div>
+    </React.Fragment>
   );
 };
 

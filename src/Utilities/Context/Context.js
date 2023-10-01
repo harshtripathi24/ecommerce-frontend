@@ -8,6 +8,15 @@ const AppProvider = ({ children }) => {
   const [product, setProduct] = useState({});
 
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(true);
+
+  const openNav = () => {
+    setIsNavOpen(true);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -54,6 +63,9 @@ const AppProvider = ({ children }) => {
         product,
         setProduct,
         storeName,
+        isNavOpen,
+        openNav,
+        closeNav,
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { GoChevronDown } from "react-icons/go";
 import { FaHeadphonesAlt } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { FaBars } from "react-icons/fa";
 
 import "./DeskNav.css";
 import NavLinks from "./NavLinks";
+import { useGlobalContext } from "../../Utilities/Context/Context";
 
 const deskNavlinks = [
   {
@@ -32,10 +33,16 @@ const deskNavlinks = [
 
 const DeskNav = () => {
   const [windoWidth, setWindoWidth] = useState(window.innerWidth);
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  // const [isNavOpen, setIsNavOpen] = useState(true);
+
+  const { isNavOpen, openNav, closeNav } = useGlobalContext();
 
   const navHandler = () => {
-    setIsNavOpen(!isNavOpen);
+    if (isNavOpen) {
+      closeNav();
+    } else {
+      openNav();
+    }
   };
 
   const detectWindowWidth = () => {
