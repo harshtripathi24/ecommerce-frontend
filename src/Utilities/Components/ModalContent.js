@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import ProductQucikView from "../../Components/Products/ProductQucikView";
 import LoginModal from "./LoginModal";
+import WriteReviewModal2 from "../../Components/ReviewSection/WriteReviewModal2";
 import { useGlobalContext } from "../Context/Context";
 import "./ModalContent.css";
 
@@ -12,6 +13,7 @@ const ModalContent = () => {
     isLoginModalOpen,
     closeLoginModal,
     isModalOpen,
+    isReviewModalOpen,
   } = useGlobalContext();
 
   // useEffect(() => {
@@ -25,6 +27,7 @@ const ModalContent = () => {
     <>
       {isQuickViewOpen && <ProductQucikView />}
       {isLoginModalOpen && <LoginModal />}
+      {isReviewModalOpen && <WriteReviewModal2 />}
     </>
   );
 };

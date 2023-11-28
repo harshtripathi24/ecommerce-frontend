@@ -10,6 +10,7 @@ import { AiFillStar, AiFillHeart } from "react-icons/ai";
 
 import "./ProductPage.css";
 import { useGlobalContext } from "../Utilities/Context/Context";
+import Reviews from "../Components/ReviewSection/Reviews";
 
 const ProductPage = () => {
   const { pid } = useParams();
@@ -25,6 +26,8 @@ const ProductPage = () => {
 
   const [optionActive, setOptionActive] = useState(0);
 
+  const [isActive, setIsActive] = useState(1);
+
   const { closeNav } = useGlobalContext();
 
   const handleSetOption = (e, index) => {
@@ -38,8 +41,6 @@ const ProductPage = () => {
     { width: 768, itemsToShow: 3 },
     { width: 1200, itemsToShow: 4 },
   ];
-
-  console.log(currentProduct.review[0].stars);
 
   useEffect(() => {
     closeNav();
@@ -153,8 +154,7 @@ const ProductPage = () => {
                       : "notStarred"
                   }`}
                 />
-
-                <span className="reviewCount">{reviewCount} Reivew</span>
+                <span className="reviewCount">{reviewCount} Reivews</span>
               </h6>
             </div>
             <p className="shortDesc">{currentProduct.shortDesc}</p>
@@ -195,6 +195,36 @@ const ProductPage = () => {
           </div>
         </div>
         <div className="lowerDiv"></div>
+      </div>
+      <div className="lowerDiv">
+        <div className="infoMenu">
+          <button
+            className={`menuBtn ${isActive === 1 ? "active" : ""}`}
+            onClick={() => setIsActive(1)}
+          >
+            Description
+          </button>
+          <button
+            className={`menuBtn ${isActive === 2 ? "active" : ""}`}
+            onClick={() => setIsActive(2)}
+          >
+            Review{" "}
+          </button>
+          <button
+            className={`menuBtn ${isActive === 3 ? "active" : ""}`}
+            onClick={() => setIsActive(3)}
+          >
+            More Info
+          </button>
+        </div>
+        <div className="deviderDiv">
+          <div className={`desc ${isActive === 1 ? " " : "hideDiv"}`}>
+            <p>{currentProduct.longDesc}</p>
+          </div>
+          <div className={`reviewDiv ${isActive === 2 ? " " : "hideDiv"}`}>
+            <Reviews currentProduct={currentProduct} />
+          </div>
+        </div>
       </div>
     </>
   );

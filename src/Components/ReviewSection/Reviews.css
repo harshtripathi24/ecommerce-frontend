@@ -1,0 +1,64 @@
+.reviews {
+  width: 80%;
+  display: flex;
+  /* border: 2px blue solid; */
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  border-bottom: 2px var(--primary-color) solid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.reviewHeader {
+  display: flex;
+  border-bottom: 2px var(--font-color-secondary) solid;
+}
+.allReview {
+  padding: 12px 12px;
+}
+
+.allReview h4 {
+  font-size: 20px;
+}
+
+.allReview h5 {
+  color: var(--font-color-secondary);
+}
+
+.writeReview {
+  margin-left: auto;
+  /* height: 24px; */
+  padding: 9px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 16px;
+  border-radius: 9px;
+  border: none;
+  /* background-color: var(--primary-color);
+  color: var(--background-color);
+  font-weight: 600; */
+}
+
+.reviewsList {
+  padding: 4px 8px;
+}
+
+.singleReview {
+  padding: px 18px;
+
+  margin: 8px;
+  padding-bottom: 8px;
+  margin-top: 24px;
+
+  /* border-bottom: 2px var(--font-color-secondary) solid; */
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.reviewText {
+  color: var(--font-color-secondary);
+}

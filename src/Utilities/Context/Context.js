@@ -5,6 +5,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [product, setProduct] = useState({});
 
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
@@ -38,6 +39,15 @@ const AppProvider = ({ children }) => {
     setLoginModalOpen(false);
   };
 
+  const openReviewModal = () => {
+    console.log("Review Modal Opened");
+    setIsReviewModalOpen(true);
+  };
+
+  const closeReviewModal = () => {
+    setIsReviewModalOpen(false);
+  };
+
   const closeModal = () => {
     setIsModalOpen(false);
     setTimeout(() => {
@@ -66,6 +76,9 @@ const AppProvider = ({ children }) => {
         isNavOpen,
         openNav,
         closeNav,
+        openReviewModal,
+        closeReviewModal,
+        isReviewModalOpen,
       }}
     >
       {children}

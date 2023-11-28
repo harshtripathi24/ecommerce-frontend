@@ -1,0 +1,24 @@
+.starRating {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 24px;
+  text-align: left;
+}
+
+.on {
+  color: var(--primary-color);
+}
+.off {
+  color: var(--font-color-secondary);
+}

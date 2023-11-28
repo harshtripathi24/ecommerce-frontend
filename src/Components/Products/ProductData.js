@@ -18,6 +18,57 @@ const Products = [
 
     review: [
       {
+        userName: "John",
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Drake Low",
+        stars: 5,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Bluebird Collie",
+        stars: 3,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "John Smith",
+        stars: 2,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Drake luke",
+        stars: 1,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Bhulam Sodhi",
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Laser Brown",
+        stars: 5,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Lisa Drew",
+        stars: 3,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Sweten Lang",
+        stars: 2,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Lora Hu",
+        stars: 4,
+        reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
+      },
+      {
+        userName: "Gim lu",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -29,6 +80,9 @@ const Products = [
     availability: true,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cumque iure voluptatem exercitationem voluptas omnis unde perspiciatis ex numquam cum sed quod, ea, quas deleniti?",
+
+    longDesc:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consectetur dolores fuga inventore voluptatibus impedit quia asperiores minima dicta qui voluptatem delectus velit officia quaerat possimus amet, nihil nisi non sequi, iste veritatis, eos earum rem! Itaque alias tempore quaerat illum nihil veritatis, culpa eius tempora temporibus unde assumenda sed inventore expedita sapiente odit earum quo nesciunt vitae, illo pariatur amet officia possimus dolorum? Iste corrupti earum ipsa iure provident? Quos minima ea illum et vel. Quas voluptates tempora libero necessitatibus, asperiores incidunt labore sapiente laudantium, consectetur ratione aspernatur? Laboriosam eius est, aliquid voluptatum dolore minus, repellat enim alias magnam facilis accusantium eos vero ab nesciunt! Quibusdam reiciendis voluptatum neque facilis velit ab, maxime nulla repellendus tempore accusantium! Blanditiis tempore at vitae quod amet ipsa dolorem, nostrum voluptatem ratione modi ducimus quidem consequatur porro ab. Et perspiciatis explicabo dignissimos, cupiditate sunt numquam nostrum impedit quis architecto illum, voluptates quia vero nobis sit voluptatibus unde nam, tempore ad vitae ipsum quaerat natus blanditiis? Facere ab quod aperiam necessitatibus hic cumque, consectetur nobis neque reiciendis iusto provident culpa velit doloribus atque nulla? Eligendi nostrum cumque, veritatis tempore sint accusantium doloribus cum unde, ab neque commodi? At laudantium natus sunt optio vitae distinctio, non quos odit nihil earum, tenetur qui quasi, facere molestias! Facere nulla excepturi voluptate incidunt corrupti. Sit, officia, ullam commodi odit tenetur dolores cum doloribus facilis omnis nihil minus libero, beatae excepturi ex et vitae dolor dignissimos consequuntur provident. Adipisci dolor illum autem veniam blanditiis molestias corrupti rem ut pariatur.",
   },
 
   {
@@ -48,6 +102,7 @@ const Products = [
 
     review: [
       {
+        userName: "Grrake Low",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -77,6 +132,7 @@ const Products = [
 
     review: [
       {
+        userName: "DK Low",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -106,6 +162,7 @@ const Products = [
 
     review: [
       {
+        userName: "Drake Vhal Not",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -135,6 +192,7 @@ const Products = [
 
     review: [
       {
+        userName: "Drake Low",
         stars: 3,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -164,6 +222,7 @@ const Products = [
 
     review: [
       {
+        userName: "Bloked Me",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -193,6 +252,7 @@ const Products = [
 
     review: [
       {
+        userName: "Greme Blond",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -222,6 +282,7 @@ const Products = [
 
     review: [
       {
+        userName: "John Dunke",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -246,6 +307,7 @@ const Products = [
 
     review: [
       {
+        userName: "Alice Bone",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -275,6 +337,7 @@ const Products = [
 
     review: [
       {
+        userName: "Bruth Guplis",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -303,6 +366,7 @@ const Products = [
 
     review: [
       {
+        userName: "Gluw Shitr",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -332,6 +396,7 @@ const Products = [
 
     review: [
       {
+        userName: "Suzie Ginem",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -357,6 +422,7 @@ const Products = [
 
     review: [
       {
+        userName: "Bujun Fellow ",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -386,6 +452,7 @@ const Products = [
 
     review: [
       {
+        userName: "Boks Room",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -410,6 +477,7 @@ const Products = [
 
     review: [
       {
+        userName: "Sony Lame",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -439,6 +507,7 @@ const Products = [
 
     review: [
       {
+        userName: "Brake Lang",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -468,6 +537,7 @@ const Products = [
 
     review: [
       {
+        userName: "Jrake Glow",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -492,6 +562,7 @@ const Products = [
 
     review: [
       {
+        userName: "Grake Low",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -521,6 +592,7 @@ const Products = [
 
     review: [
       {
+        userName: "Drake Low",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
@@ -549,6 +621,7 @@ const Products = [
 
     review: [
       {
+        userName: "Drake Low",
         stars: 4,
         reviewText: "fadfas adfasdf gaagasdgasd wegawheefa good product",
       },
