@@ -4,6 +4,7 @@ import { useGlobalContext } from "../../Utilities/Context/Context";
 import PriceIcon from "../../Utilities/Smaller Component/PriceIcon";
 
 import "./ProductQuickView.css";
+import { Link } from "react-router-dom";
 
 const ProductQucikView = (props) => {
   const { product } = useGlobalContext();
@@ -28,7 +29,12 @@ const ProductQucikView = (props) => {
           </h6>
         </div>
         <div className="detailsDiv">
-          <a href="http://">See More Details</a>
+          <Link
+            target="_blank"
+            to={`${process.env.REACT_APP_BASE_URL}/product/${product.pid}`}
+          >
+            See More Details
+          </Link>
         </div>
         <div className="addDiv">
           <form action="" className="cartForm" method="post">

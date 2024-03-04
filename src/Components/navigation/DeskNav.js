@@ -7,23 +7,24 @@ import { FaBars } from "react-icons/fa";
 import "./DeskNav.css";
 import NavLinks from "./NavLinks";
 import { useGlobalContext } from "../../Utilities/Context/Context";
+import { Link } from "react-router-dom";
 
 const deskNavlinks = [
   {
     name: "Home",
-    url: "",
+    url: "/",
   },
   {
     name: "Contact Us",
-    url: "",
+    url: "/contact_us",
   },
   {
     name: "Services",
-    url: "",
+    url: "/services",
   },
   {
     name: "FAQ",
-    url: "",
+    url: "/FAQ",
   },
   {
     name: "Wishlist",
@@ -88,7 +89,7 @@ const DeskNav = () => {
             {deskNavlinks.map((link, index) => {
               return (
                 <React.Fragment key={index}>
-                  <a href={link.url}>{link.name}</a>
+                  <Link to={`${link.url}`}>{link.name}</Link>
                 </React.Fragment>
               );
             })}
