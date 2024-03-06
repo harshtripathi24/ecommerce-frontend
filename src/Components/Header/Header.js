@@ -32,7 +32,12 @@ const Header = () => {
         <div className="leftHeader">
           {windoWidth < 1232 ? <MainNaviagtion /> : ""}
           <div className="logo-div">
-            <img src={logo} alt="Logo" />
+            <a
+              className="homeAnchor"
+              href={`${process.env.REACT_APP_BASE_URL}`}
+            >
+              <img src={logo} alt="Logo" />
+            </a>
           </div>
         </div>
 

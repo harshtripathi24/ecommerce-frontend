@@ -89,7 +89,9 @@ const DeskNav = () => {
             {deskNavlinks.map((link, index) => {
               return (
                 <React.Fragment key={index}>
-                  <Link to={`${link.url}`}>{link.name}</Link>
+                  <Link to={`${process.env.REACT_APP_BASE_URL}${link.url}`}>
+                    {link.name}
+                  </Link>
                 </React.Fragment>
               );
             })}

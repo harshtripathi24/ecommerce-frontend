@@ -71,6 +71,7 @@ a {
 
   width: 170px;
   height: fit-content;
+  cursor: pointer;
 
   padding: 2px;
   margin: 1px;
@@ -78,6 +79,7 @@ a {
   margin-top: auto;
   margin-bottom: auto;
 }
+
 .logo-div img {
   margin-top: 0.6em;
   margin-right: 1px;
