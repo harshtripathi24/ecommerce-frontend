@@ -40,7 +40,6 @@ a {
 }
 
 .signin-div {
-  width: 50%;
   font-family: var(--primary-font);
   /* border: 1px orangered solid; */
   color: var(--font-color-secondary);
