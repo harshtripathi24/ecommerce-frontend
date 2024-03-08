@@ -3,16 +3,6 @@
   margin: 10px auto;
 }
 
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: center; */
-  /* border: 1px magenta solid; */
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .selectCategoryBox {
   display: flex;
   margin-left: auto;
@@ -145,12 +135,5 @@
   }
   .categories li a {
     white-space: nowrap;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .products {
-    justify-content: center;
-    /* border: 1px magenta solid; */
   }
 }

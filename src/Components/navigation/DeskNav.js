@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { GoChevronDown } from "react-icons/go";
 import { FaHeadphonesAlt } from "react-icons/fa";
@@ -6,24 +6,29 @@ import { FaBars } from "react-icons/fa";
 
 import "./DeskNav.css";
 import NavLinks from "./NavLinks";
+import { useGlobalContext } from "../../Utilities/Context/Context";
+import { Link } from "react-router-dom";
 
-const deskNavlinks = [
+export const deskNavlinks = [
   {
     name: "Home",
-    url: "",
-  },
-  {
-    name: "Contact Us",
-    url: "",
-  },
-  {
-    name: "Services",
-    url: "",
+    url: "/",
   },
   {
     name: "FAQ",
-    url: "",
+    url: "/FAQ",
   },
+
+  {
+    name: "Contact Us",
+    url: "/contact_us",
+  },
+
+  {
+    name: "About Us",
+    url: "/about_us",
+  },
+
   {
     name: "Wishlist",
     url: "",
@@ -32,10 +37,16 @@ const deskNavlinks = [
 
 const DeskNav = () => {
   const [windoWidth, setWindoWidth] = useState(window.innerWidth);
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  // const [isNavOpen, setIsNavOpen] = useState(true);
+
+  const { isNavOpen, openNav, closeNav } = useGlobalContext();
 
   const navHandler = () => {
-    setIsNavOpen(!isNavOpen);
+    if (isNavOpen) {
+      closeNav();
+    } else {
+      openNav();
+    }
   };
 
   const detectWindowWidth = () => {
@@ -81,7 +92,9 @@ const DeskNav = () => {
             {deskNavlinks.map((link, index) => {
               return (
                 <React.Fragment key={index}>
-                  <a href={link.url}>{link.name}</a>
+                  <Link to={`${process.env.REACT_APP_BASE_URL}${link.url}`}>
+                    {link.name}
+                  </Link>
                 </React.Fragment>
               );
             })}

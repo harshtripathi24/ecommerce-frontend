@@ -1,0 +1,24 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* border: 1px magenta solid; */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toolTip {
+  z-index: 5;
+}
+
+.toolTip p {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 900px) {
+  .products {
+    justify-content: center;
+    /* border: 1px magenta solid; */
+  }
+}

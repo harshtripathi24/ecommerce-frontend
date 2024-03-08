@@ -5,9 +5,14 @@ import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 
+import { deskNavlinks } from "../navigation/DeskNav";
+
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  var subMenuLinks = deskNavlinks;
+
   return (
     <>
       <div className="max-width mainFooter">
@@ -36,19 +41,25 @@ const Footer = () => {
           <div className="mainMenu">
             <div className="menu">Main Menu</div>
             <div className="menuItems">
-              <a href="/">Home</a>
-              <a href="/">Catalogs</a>
-              <a href="/">Specials</a>
-              <a href="/">Pages</a>
-              <a href="/">Product Page</a>
+              {subMenuLinks.map((link) => {
+                return (
+                  <a href={`${process.env.REACT_APP_BASE_URL}${link.url}`}>
+                    {link.name}
+                  </a>
+                );
+              })}
             </div>
           </div>
 
           <div className="mainMenu">
             <div className="menu">Other Links</div>
             <div className="menuItems">
-              <a href="/">Term and Conditions </a>
-              <a href="/">Privacy Policy</a>
+              <a href={`${process.env.REACT_APP_BASE_URL}/term_and_conditions`}>
+                Term and Conditions{" "}
+              </a>
+              <a href={`${process.env.REACT_APP_BASE_URL}/privacy_policy`}>
+                Privacy Policy
+              </a>
               <a href="/">Something</a>
               <a href="/">something</a>
               <a href="/">Something</a>

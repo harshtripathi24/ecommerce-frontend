@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import Products from "./ProductData";
-import SingleProduct from "./SingleProduct";
+
+import ProductsList from "./ProductsList";
 
 import "./ProductsSection.css";
 const ProductsSection = () => {
@@ -17,7 +18,6 @@ const ProductsSection = () => {
     setProducts(tempProducts);
   }, [category]);
 
-  let checkBorder = 0;
   return (
     <>
       <div className="productSection">
@@ -58,19 +58,7 @@ const ProductsSection = () => {
             </li>
           </ul>
         </div>
-        <div className="products">
-          {products.map((product) => {
-            checkBorder++;
-            return (
-              <SingleProduct
-                id={product.pid}
-                key={product.pid}
-                product={product}
-                checkBorder={checkBorder}
-              />
-            );
-          })}
-        </div>
+        <ProductsList products={products} />
       </div>
     </>
   );

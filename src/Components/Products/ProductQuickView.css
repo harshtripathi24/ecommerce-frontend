@@ -1,0 +1,143 @@
+.quickView {
+  display: flex;
+  flex-direction: row;
+
+  width: 58vw;
+  /* height: 48vh; */
+}
+
+.left {
+  height: 100%;
+  width: 35%;
+
+  /* border: 2px red solid; */
+}
+
+.left .productImage {
+  width: 60%;
+  height: 80%;
+}
+
+.right {
+  /* border: 2px blue solid; */
+  float: left;
+  padding-left: 30px;
+  width: 60%;
+}
+
+.right .titleText {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.right .priceDiv {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.right .priceDiv span {
+  color: red;
+  text-decoration: line-through;
+}
+
+.right .detailsDiv {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 15px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.right .addDiv {
+  /* border: 2px magenta solid; */
+  margin-top: 40px;
+  display: flex;
+}
+
+.right .addDiv .cartForm {
+  width: 100%;
+  display: flex;
+}
+
+.right .addDiv input {
+  width: 60px;
+  height: 40px;
+  border: 1px var(--font-color-secondary) solid;
+  text-align: center;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.right .addDiv button {
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-size: large;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  border: none;
+  width: 50%;
+  margin-left: 12px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+
+.right .descriptionDiv {
+  text-align: left;
+  margin-top: 30px;
+  margin-right: 5px;
+  padding: 5px;
+  display: flex;
+  height: 100px;
+
+  border-top: 1px var(--font-color-secondary) solid;
+  border-bottom: 1px var(--font-color-secondary) solid;
+}
+
+.right .descriptionDiv p {
+  margin-top: auto;
+  margin-bottom: auto;
+  /* border: 1px red dotted; */
+  font-size: small;
+  color: var(--font-color-secondary);
+}
+.right .detailsDiv a:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .quickView {
+    width: 80vw;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .left {
+    width: 90%;
+  }
+
+  .left .productImage {
+    /* border: 2px purple solid; */
+    height: 200px;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .right {
+    width: 90%;
+    height: fit-content;
+    /* border: 2px solid red; */
+  }
+
+  .right .descriptionDiv {
+    height: fit-content;
+  }
+}

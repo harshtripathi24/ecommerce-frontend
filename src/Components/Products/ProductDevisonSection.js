@@ -2,19 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import Products from "./ProductData";
 import SingleProduct from "./SingleProduct";
+import ProductsList from "./ProductsList";
 
-import "./ProductsSection.css";
 import "./ProductDevisionSection.css";
 const ProductDevisonSection = ({ sectionType, productIds, devisonTitle }) => {
   const [isActive, setIsActive] = useState(1);
-  //   const [productIds, setProductIds] = useState([8, 5, 4, 3, 16]);
   const [products, setProducts] = useState(Products);
-
-  console.log(
-    Products.filter((product) =>
-      productIds.some((proId) => proId === product.pid)
-    )
-  );
 
   useEffect(() => {
     let tempProducts = Products.filter((product) =>
@@ -42,17 +35,7 @@ const ProductDevisonSection = ({ sectionType, productIds, devisonTitle }) => {
       </div>
 
       <div className="productSection">
-        <div className="products">
-          {products.map((product) => {
-            return (
-              <SingleProduct
-                id={product.pid}
-                key={product.pid}
-                product={product}
-              />
-            );
-          })}
-        </div>
+        <ProductsList products={products} />
       </div>
     </>
   );

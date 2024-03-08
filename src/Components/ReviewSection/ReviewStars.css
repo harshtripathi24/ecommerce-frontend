@@ -1,0 +1,7 @@
+.notStarred {
+  color: var(--font-color-secondary);
+}
+
+.starred {
+  color: var(--primary-color);
+}

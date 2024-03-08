@@ -40,7 +40,6 @@ a {
 }
 
 .signin-div {
-  width: 50%;
   font-family: var(--primary-font);
   /* border: 1px orangered solid; */
   color: var(--font-color-secondary);
@@ -71,6 +70,7 @@ a {
 
   width: 170px;
   height: fit-content;
+  cursor: pointer;
 
   padding: 2px;
   margin: 1px;
@@ -78,6 +78,7 @@ a {
   margin-top: auto;
   margin-bottom: auto;
 }
+
 .logo-div img {
   margin-top: 0.6em;
   margin-right: 1px;

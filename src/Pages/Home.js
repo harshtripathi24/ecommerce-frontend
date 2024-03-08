@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Slider from "../Components/Slider/Slider";
 import PolicyBlocks from "../Components/PolicyBlocks/PolicyBlocks";
@@ -17,10 +17,19 @@ import loveBookBanner from "../Utilities/Images/Banners/loveBookBanner.png";
 import ProductsSection from "../Components/Products/ProductsSection";
 
 import ProductDevisonSection from "../Components/Products/ProductDevisonSection";
+import ProductPublisherSection from "../Components/Products/productPublisherSection";
+import { useGlobalContext } from "../Utilities/Context/Context";
+
 import "./Home.css";
 const Home = () => {
+  const { openNav } = useGlobalContext();
+
+  useEffect(() => {
+    openNav();
+  }, []);
+
   return (
-    <div>
+    <React.Fragment>
       <Slider />
       <PolicyBlocks />
       <BannerSection>
@@ -68,7 +77,8 @@ const Home = () => {
         productIds={[12, 8, 19, 13, 20]}
         devisonTitle={"Lovley Books"}
       />
-    </div>
+      <ProductPublisherSection />
+    </React.Fragment>
   );
 };
 
