@@ -1,0 +1,36 @@
+.PrivacyPolicyMain .container {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+  background: var(--background-color);
+  border: 2px var(--primary-color) solid;
+  border-radius: 9px;
+  padding: 2.5rem 2rem;
+  max-width: var(--fixed-width);
+  gap: 1rem 2rem;
+}
+
+.PrivacyPolicyMain .container .heading {
+  color: var(--primary-color);
+
+  font-size: 32px;
+
+  text-transform: capitalize;
+}
+
+.PrivacyPolicyMain .container ul {
+  list-style: outside;
+}
+
+.PrivacyPolicyMain .container h2 {
+  font-size: 18px;
+
+  color: var(--font-color-primary);
+
+  margin-top: 24px;
+}
+
+.PrivacyPolicyMain .container span {
+  font-weight: 700;
+}

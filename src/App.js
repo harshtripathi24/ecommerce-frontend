@@ -7,10 +7,13 @@ import Modal from "./Utilities/Components/Modal";
 import ModalContent from "./Utilities/Components/ModalContent";
 import { Routes, Route } from "react-router-dom";
 import ContactUsPage from "./Pages/ContactUsPage";
-import ServicePage from "./Pages/ServicePage";
 import FAQPage from "./Pages/FAQPage";
 
 import "animate.css";
+import AboutUsPage from "./Pages/AboutUsPage";
+import NotFoundPage from "./Pages/NotFoundPage";
+import TermAndConditionPage from "./Pages/TermAndConditionPage.js";
+import PrivacyPolicy from "./Pages/PrivacyPolicy.js";
 
 function App() {
   return (
@@ -23,9 +26,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product/:pid" element={<ProductPage />} />
         <Route path="/contact_us" element={<ContactUsPage />} />
-        <Route path="/services" element={<ServicePage />} />
+        <Route path="/about_us" element={<AboutUsPage />} />
         <Route path="/FAQ" element={<FAQPage />} />
-        <Route path="*">This is 404 page</Route>
+        <Route path="/term_and_conditions" element={<TermAndConditionPage />} />
+        <Route path="/privacy_policy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </>

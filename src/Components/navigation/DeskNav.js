@@ -9,23 +9,26 @@ import NavLinks from "./NavLinks";
 import { useGlobalContext } from "../../Utilities/Context/Context";
 import { Link } from "react-router-dom";
 
-const deskNavlinks = [
+export const deskNavlinks = [
   {
     name: "Home",
     url: "/",
   },
   {
-    name: "Contact Us",
-    url: "/contact_us",
-  },
-  {
-    name: "Services",
-    url: "/services",
-  },
-  {
     name: "FAQ",
     url: "/FAQ",
   },
+
+  {
+    name: "Contact Us",
+    url: "/contact_us",
+  },
+
+  {
+    name: "About Us",
+    url: "/about_us",
+  },
+
   {
     name: "Wishlist",
     url: "",
