@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
 
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const openNav = () => {
     setIsNavOpen(true);
@@ -40,12 +41,19 @@ const AppProvider = ({ children }) => {
   };
 
   const openReviewModal = () => {
-    console.log("Review Modal Opened");
     setIsReviewModalOpen(true);
   };
 
   const closeReviewModal = () => {
     setIsReviewModalOpen(false);
+  };
+
+  const openFilterModal = () => {
+    setIsFilterOpen(true);
+  };
+
+  const closeFilterModal = () => {
+    setIsFilterOpen(false); //
   };
 
   const closeModal = () => {
@@ -79,6 +87,9 @@ const AppProvider = ({ children }) => {
         openReviewModal,
         closeReviewModal,
         isReviewModalOpen,
+        isFilterOpen,
+        openFilterModal,
+        closeFilterModal,
       }}
     >
       {children}

@@ -27,7 +27,11 @@
   place-items: center;
   position: relative;
   padding: 15px;
-  margin-bottom: 115px;
+  margin-top: 12px !important;
+  margin-bottom: auto;
+  max-height: 75vh;
+
+  overflow-y: scroll;
 }
 .close-modal-btn {
   position: absolute;

@@ -5,6 +5,7 @@ import LoginModal from "./LoginModal";
 import WriteReviewModal2 from "../../Components/ReviewSection/WriteReviewModal2";
 import { useGlobalContext } from "../Context/Context";
 import "./ModalContent.css";
+import FilterModal from "./FilterModal";
 
 const ModalContent = () => {
   const {
@@ -14,6 +15,7 @@ const ModalContent = () => {
     closeLoginModal,
     isModalOpen,
     isReviewModalOpen,
+    isFilterOpen,
   } = useGlobalContext();
 
   // useEffect(() => {
@@ -28,6 +30,7 @@ const ModalContent = () => {
       {isQuickViewOpen && <ProductQucikView />}
       {isLoginModalOpen && <LoginModal />}
       {isReviewModalOpen && <WriteReviewModal2 />}
+      {isFilterOpen && <FilterModal />}
     </>
   );
 };
