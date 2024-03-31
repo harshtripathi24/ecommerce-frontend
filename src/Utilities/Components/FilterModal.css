@@ -131,6 +131,10 @@
   margin: 8px;
   margin-top: 4px;
 
+  padding-left: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
