@@ -47,6 +47,10 @@
   border-radius: 9px;
 }
 
+.FilterModalMain .FormDiv .submitBtn:hover {
+  cursor: pointer;
+}
+
 .FilterModalMain .filterGroup .multi-range-slider {
   display: flex;
   position: relative;
