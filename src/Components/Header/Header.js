@@ -9,6 +9,7 @@ import DeskNav from "../navigation/DeskNav";
 import logo from "../../Utilities/Images/header-logo.png";
 
 import "./header.css";
+import { useGlobalContext } from "../../Utilities/Context/Context";
 
 const Header = () => {
   const [cartItem, setCartItem] = useState(0);
@@ -16,6 +17,25 @@ const Header = () => {
 
   const detectWindowWidth = () => {
     setWindoWidth(window.innerWidth);
+  };
+
+  const {
+    openModal,
+    isQuickViewOpen,
+    openQuickView,
+    setProduct,
+    openLoginModal,
+    openSignUpModal,
+  } = useGlobalContext();
+
+  const handleLoginModal = () => {
+    openLoginModal();
+    openModal();
+  };
+
+  const handleSinUpModal = () => {
+    openSignUpModal();
+    openModal();
   };
 
   useEffect(() => {
@@ -47,11 +67,11 @@ const Header = () => {
 
         <div className="rightHeader">
           <div className="signin-div">
-            <a href="http://">
+            <a onClick={() => handleLoginModal()}>
               <span>Sign in</span>
             </a>
             <br />
-            or <a href="http://">Register</a>
+            or <a onClick={() => handleSinUpModal()}>Register</a>
           </div>
           <div className="cart-container">
             <AiOutlineShoppingCart className="cart" />

@@ -5,14 +5,8 @@ import { StyledTextField } from "./InputComponent/StyledTextField";
 import googleIocn from "../Images/Icons/googleIcon.png";
 import loginImage from "../Images/UtiltiyImages/loginModalImage.png";
 
-import "./LoginModal.css";
-const LoginModal = () => {
-  const { storeName, openModal, openSignUpModal } = useGlobalContext();
-
-  const handleSinUpModal = () => {
-    openSignUpModal();
-    openModal();
-  };
+const SignUpModal = () => {
+  const { storeName } = useGlobalContext();
 
   return (
     <>
@@ -23,14 +17,16 @@ const LoginModal = () => {
         <div className="rightDiv">
           <div className="loginDiv">
             <h5 className="LoginModalHeading">
-              Login and Get access to your Orders, Wishlist and Recommendations.
+              Register and Get access to your Orders, Wishlist and
+              Recommendations.
             </h5>
             <form action="" method="post">
               <StyledTextField label="Email" type="email" />
               <StyledTextField label="Password" type="password" />
+              <StyledTextField label="Confirm Password" type="password" />
 
               <button className="loginButton" type="submit">
-                Login
+                Register
               </button>
             </form>
 
@@ -38,14 +34,8 @@ const LoginModal = () => {
 
             <button className="googleButton" type="button">
               <img src={googleIocn} alt="Google  Icon" className="googleIcon" />
-              Login with Google
+              Sign Up with Google
             </button>
-          </div>
-          <div className="signUpDiv">
-            <a onClick={() => handleSinUpModal()}>
-              New to <span className="storeName"> {storeName} </span>? Create an
-              Account
-            </a>
           </div>
         </div>
       </div>
@@ -53,4 +43,4 @@ const LoginModal = () => {
   );
 };
 
-export default LoginModal;
+export default SignUpModal;

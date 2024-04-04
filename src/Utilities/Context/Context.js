@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const [product, setProduct] = useState({});
 
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
@@ -40,6 +41,15 @@ const AppProvider = ({ children }) => {
     setLoginModalOpen(false);
   };
 
+  const openSignUpModal = () => {
+    closeLoginModal();
+
+    setIsSignUpModalOpen(true);
+  };
+  const closeSignUpModel = () => {
+    setIsSignUpModalOpen(false);
+  };
+
   const openReviewModal = () => {
     setIsReviewModalOpen(true);
   };
@@ -61,7 +71,10 @@ const AppProvider = ({ children }) => {
     setTimeout(() => {
       closeQuickView();
       closeLoginModal();
-    }, 1000);
+      closeSignUpModel();
+      closeReviewModal();
+      closeFilterModal();
+    }, 500);
   };
 
   const storeName = "Smart Books";
@@ -78,6 +91,9 @@ const AppProvider = ({ children }) => {
         isLoginModalOpen,
         openLoginModal,
         closeLoginModal,
+        isSignUpModalOpen,
+        openSignUpModal,
+        closeSignUpModel,
         product,
         setProduct,
         storeName,

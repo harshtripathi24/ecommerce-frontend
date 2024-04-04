@@ -44,7 +44,9 @@ const ProductQucikView = (props) => {
               defaultValue={1}
               id="quantity"
             />
-            <button type="submit">Add to Cart</button>
+            <button className="submitBtn" type="submit">
+              Add to Cart
+            </button>
           </form>
         </div>
         <div className="descriptionDiv">

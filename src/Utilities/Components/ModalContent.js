@@ -6,6 +6,7 @@ import WriteReviewModal2 from "../../Components/ReviewSection/WriteReviewModal2"
 import { useGlobalContext } from "../Context/Context";
 import "./ModalContent.css";
 import FilterModal from "./FilterModal";
+import SignUpModal from "./SignUpModal";
 
 const ModalContent = () => {
   const {
@@ -16,6 +17,7 @@ const ModalContent = () => {
     isModalOpen,
     isReviewModalOpen,
     isFilterOpen,
+    isSignUpModalOpen,
   } = useGlobalContext();
 
   // useEffect(() => {
@@ -31,6 +33,7 @@ const ModalContent = () => {
       {isLoginModalOpen && <LoginModal />}
       {isReviewModalOpen && <WriteReviewModal2 />}
       {isFilterOpen && <FilterModal />}
+      {isSignUpModalOpen && <SignUpModal />}
     </>
   );
 };

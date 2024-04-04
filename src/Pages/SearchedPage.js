@@ -25,7 +25,11 @@ const SearchedPage = () => {
     setWindoWidth(window.innerWidth);
   };
 
+  const { closeNav } = useGlobalContext();
+
   useEffect(() => {
+    closeNav();
+
     const FetchProdctIds = async () => {
       const prodIds = await Products.map((product) => product.pid);
       setSearchedProduct(prodIds);
