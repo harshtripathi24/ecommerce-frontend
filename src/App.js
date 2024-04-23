@@ -8,6 +8,7 @@ import ModalContent from "./Utilities/Components/ModalContent";
 import { Routes, Route } from "react-router-dom";
 import ContactUsPage from "./Pages/ContactUsPage";
 import FAQPage from "./Pages/FAQPage";
+import { ToastContainer } from "react-toastify";
 
 import "animate.css";
 import AboutUsPage from "./Pages/AboutUsPage";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/searched_page" element={<SearchedPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <ToastContainer />
       <Footer />
     </>
   );

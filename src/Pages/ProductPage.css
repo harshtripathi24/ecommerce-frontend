@@ -183,9 +183,12 @@
   border: none;
 }
 
-.optionDiv {
+.optionsDiv {
+  /* border: 2px red solid; */
   display: flex;
   flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 35px;
 }
 
 .buyingForm .options {
@@ -195,8 +198,8 @@
 
   font-weight: 400;
 
-  margin-top: 20px;
-  margin-bottom: 35px;
+  margin-top: 8px;
+  margin-bottom: 5px;
 }
 
 .buyingForm .optionActive {
@@ -352,5 +355,11 @@
     border-bottom: none;
     border: 2px var(--primary-color) solid;
     border-radius: 14px;
+  }
+
+  .optionsDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

@@ -8,7 +8,11 @@ const ProductsList = ({ products }) => {
     <div className="products">
       {products.map((product) => {
         return (
-          <SingleProduct id={product.pid} key={product.pid} product={product} />
+          <SingleProduct
+            id={product.Product.id}
+            key={product.Product.id}
+            product={product.Product}
+          />
         );
       })}
       <ReactTooltip

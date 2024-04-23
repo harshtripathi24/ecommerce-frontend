@@ -63,7 +63,12 @@
   font-weight: 400;
 }
 
+.loginDiv .orOption {
+  display: none;
+}
+
 .googleButton {
+  display: none;
   width: 100%;
   border: none;
   padding: 5px;

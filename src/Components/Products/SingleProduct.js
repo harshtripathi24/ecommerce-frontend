@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { FaShoppingBasket, FaEye } from "react-icons/fa";
-
+import { calculatePercentageOff } from "../../Utilities/Calculation/PercentOff";
 import { AiFillHeart } from "react-icons/ai";
 import { BiShuffle } from "react-icons/bi";
 import { Link } from "react-router-dom";
@@ -13,6 +13,8 @@ import { BiSolidStar } from "react-icons/bi";
 import "./SingleProduct.css";
 const SingleProduct = ({ product, checkBorder }) => {
   const [isVisible, setIsVisble] = useState(false);
+
+  const percentOff = calculatePercentageOff(product.fakePrice, product.price);
 
   const {
     openModal,
@@ -46,7 +48,7 @@ const SingleProduct = ({ product, checkBorder }) => {
       >
         <Link
           className="productLink"
-          to={`${process.env.REACT_APP_BASE_URL}/product/${product.pid}`}
+          to={`${process.env.REACT_APP_BASE_URL}/product/${product.id}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -69,7 +71,7 @@ const SingleProduct = ({ product, checkBorder }) => {
                 <PriceIcon />
                 {product.fakePrice}
               </p>
-              <p className="discountPercent">-50%</p>
+              <p className="discountPercent">-{percentOff}%</p>
             </div>
           </div>
         </Link>
@@ -91,7 +93,7 @@ const SingleProduct = ({ product, checkBorder }) => {
           </button>
 
           <Link
-            to={`${process.env.REACT_APP_BASE_URL}/product/${product.pid}`}
+            to={`${process.env.REACT_APP_BASE_URL}/product/${product.id}`}
             target="_blank"
             rel="noopener noreferrer"
           >

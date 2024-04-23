@@ -1,19 +1,53 @@
 import React, { useEffect, useState } from "react";
 
 import Products from "./ProductData";
-import SingleProduct from "./SingleProduct";
+
 import ProductsList from "./ProductsList";
 
+import axios from "axios";
+import { toast } from "react-toastify";
+import MoonLoader from "react-spinners/MoonLoader";
+
 import "./ProductDevisionSection.css";
-const ProductDevisonSection = ({ sectionType, productIds, devisonTitle }) => {
-  const [isActive, setIsActive] = useState(1);
+const ProductDevisonSection = ({
+  sectionType,
+  productIds,
+  devisonTitle,
+  tagName,
+}) => {
   const [products, setProducts] = useState(Products);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const mainColor = getComputedStyle(document.documentElement)
+    .getPropertyValue("--primary-color")
+    .trim();
 
   useEffect(() => {
-    let tempProducts = Products.filter((product) =>
-      productIds.some((proId) => proId === product.pid)
-    );
-    setProducts(tempProducts);
+    setIsLoaded(false);
+
+    axios
+      .post(`${process.env.REACT_APP_BACKEND_BASER_URL}/api/tags/show-tag`, {
+        tag: tagName,
+      })
+      .then((response) => {
+        setProducts(response.data);
+        setIsLoaded(true);
+
+        // setIsLoaded(true);
+      })
+      .catch((error) => {
+        setIsLoaded(false);
+
+        let err =
+          "Error Occurred: " +
+          error.response.status +
+          " " +
+          error.response.data.message;
+        toast.error(err, {
+          position: "top-center",
+          theme: "colored",
+        });
+      });
   }, []);
 
   return (
@@ -34,9 +68,24 @@ const ProductDevisonSection = ({ sectionType, productIds, devisonTitle }) => {
         )}
       </div>
 
-      <div className="productSection">
-        <ProductsList products={products} />
-      </div>
+      {!isLoaded && (
+        <div className="loader">
+          <MoonLoader
+            color={mainColor}
+            loading={!isLoaded}
+            size={60}
+            className="loaderMain"
+            width={15}
+            height={100}
+          />
+        </div>
+      )}
+
+      {isLoaded && (
+        <div className="productSection">
+          <ProductsList products={products} />
+        </div>
+      )}
     </>
   );
 };
