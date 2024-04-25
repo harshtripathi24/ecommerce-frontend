@@ -13,6 +13,7 @@ import MoonLoader from "react-spinners/MoonLoader";
 
 import "./ProductPage.css";
 import { useGlobalContext } from "../Utilities/Context/Context";
+import { useAuthContext } from "../Utilities/Context/AuthContext";
 import Reviews from "../Components/ReviewSection/Reviews";
 
 const ProductPage = () => {
@@ -25,12 +26,44 @@ const ProductPage = () => {
 
   const [heroImage, setHeroImage] = useState([]);
   const [optionActive, setOptionActive] = useState(0);
+  const [currentQuantity, setCurrentQuantity] = useState(1);
   const [isActive, setIsActive] = useState(1);
+
   const [product, setProduct] = useState([]);
   const [averageStars, setAverageStars] = useState(0);
   const [totalReviews, setTotalReviews] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const { closeNav } = useGlobalContext();
+
+  const { userToken, currentUser, loginAuthContext } = useAuthContext();
+
+  const getLogin = async (uid, token) => {
+    const config = {
+      headers: { Authorization: `Bearer ${token}` },
+    };
+
+    await axios
+      .get(
+        `${process.env.REACT_APP_BACKEND_BASER_URL}/api/users/show-user/${uid}`,
+        config
+      )
+      .then((response) => {
+        loginAuthContext(response.data.user, token);
+      })
+      .catch((error) => {
+        console.log(error);
+
+        let err =
+          "Error Occurred: " +
+          error.response.status +
+          " Error Occurred in Fetching User " +
+          error.response.data.message;
+        toast.error(err, {
+          position: "top-center",
+          theme: "colored",
+        });
+      });
+  };
 
   const handleSetOption = (e, index) => {
     e.preventDefault();
@@ -47,10 +80,112 @@ const ProductPage = () => {
         tReviews += 1;
       });
 
-      let avStars = Math.round(tStars / totalReviews);
+      let avStars;
+      if (tReviews === 0) {
+        avStars = 0; // or any other desired value
+      } else {
+        avStars = Math.round(tStars / tReviews);
+      }
 
       setAverageStars(avStars);
       setTotalReviews(tReviews);
+    }
+  };
+
+  const handleAddToCart = async (e) => {
+    e.preventDefault();
+
+    if (userToken) {
+      const config = {
+        headers: { Authorization: `Bearer ${userToken}` },
+      };
+
+      const bodyParameters = {
+        pid: product.id,
+        uid: currentUser.id,
+        quantity: currentQuantity,
+        optionChosen: product.options.split("/")[optionActive],
+      };
+
+      await axios
+        .post(
+          `${process.env.REACT_APP_BACKEND_BASER_URL}/api/cartList/add-item`,
+          bodyParameters,
+          config
+        )
+        .then((response) => {
+          getLogin(currentUser.id, userToken);
+
+          let res = "Successful: " + response.data.message;
+          toast.success(res, {
+            position: "top-center",
+            theme: "colored",
+          });
+        })
+        .catch((error) => {
+          let err =
+            "Error Occurred: " +
+            error.response.status +
+            " " +
+            error.response.data.message;
+          toast.error(err, {
+            position: "top-center",
+            theme: "colored",
+          });
+        });
+    } else {
+    }
+  };
+
+  const handleAddToWishlist = async () => {
+    if (userToken) {
+      const config = {
+        headers: { Authorization: `Bearer ${userToken}` },
+      };
+
+      const bodyParameters = {
+        pid: product.id,
+        uid: currentUser.id,
+        quantity: currentQuantity,
+        optionChosen: product.options.split("/")[optionActive],
+      };
+
+      await axios
+        .post(
+          `${process.env.REACT_APP_BACKEND_BASER_URL}/api/wishList/add-item`,
+          bodyParameters,
+          config
+        )
+        .then((response) => {
+          let res = "Successful: " + response.data.message;
+          toast.success(res, {
+            position: "top-center",
+            theme: "colored",
+          });
+        })
+        .catch((error) => {
+          let err =
+            "Error Occurred: " +
+            error.response.status +
+            " " +
+            error.response.data.message;
+          toast.error(err, {
+            position: "top-center",
+            theme: "colored",
+          });
+        });
+    } else {
+    }
+  };
+
+  const handleQuantityChange = (e) => {
+    let newQuantity = parseInt(e.target.value);
+    if (newQuantity < 1) {
+      setCurrentQuantity(1);
+    } else if (newQuantity > 10) {
+      setCurrentQuantity(10);
+    } else {
+      setCurrentQuantity(newQuantity);
     }
   };
 
@@ -115,8 +250,6 @@ const ProductPage = () => {
               className="loaderMain"
               width={15}
               height={100}
-
-              // style={loaderStyle}
             />
           </div>
         )}
@@ -125,6 +258,7 @@ const ProductPage = () => {
   } else {
     return (
       <>
+        {console.log("Average Stars", +averageStars)}
         <div className="productPage">
           <div className="upperDiv">
             <p className="productName">{product.name}</p>
@@ -244,17 +378,24 @@ const ProductPage = () => {
 
                 <label className="label">Qty: </label>
                 <input
+                  className="quantity"
                   type="number"
-                  name="
-              quantity"
+                  name="quantity"
                   id="quantity"
+                  value={currentQuantity}
                   defaultValue={1}
+                  max={10}
+                  min={1}
+                  onChange={handleQuantityChange}
                 />
-                <button className="addToCart">+ Add to Cart</button>
+                {console.log("Current Quantity: " + currentQuantity)}
+                <button onClick={handleAddToCart} className="addToCart">
+                  + Add to Cart
+                </button>
                 <button className="buyNow">+ Buy Now</button>
               </form>
 
-              <p className="addToWishList">
+              <p onClick={handleAddToWishlist} className="addToWishList">
                 <AiFillHeart />
                 Add to Wish List
               </p>

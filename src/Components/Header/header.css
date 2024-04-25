@@ -31,7 +31,7 @@ a {
 .rightHeader {
   display: flex;
   flex-direction: row;
-
+  /* border: blue 1px solid; */
   margin: 5px;
   margin-right: 20px;
 
@@ -93,18 +93,20 @@ a {
 }
 
 .cartItems-total {
-  padding-left: 3px;
-  padding-right: 3px;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
   font-size: 10px;
-  font-weight: bold;
+  /* font-weight: bold; */
   background: var(--secondary-color);
   color: #fff;
   padding: 0 3px;
   vertical-align: top;
   margin-left: -10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .cart {
@@ -113,6 +115,15 @@ a {
   color: var(--primary-color);
   font-size: 30px;
   margin-top: 0.1em;
+}
+
+.rightHeader .profileDiv {
+  /* border: 2px red solid; */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: bottom;
+  margin-top: auto;
 }
 
 @media only screen and (min-width: 912px) and (max-width: 1232px) {
@@ -135,7 +146,7 @@ a {
     -moz-border-radius: 9px;
     border-radius: 9px;
     font-size: 15px;
-    font-weight: bold;
+    /* font-weight: bold; */
     background: var(--secondary-color);
     color: #fff;
     padding: 0 6px;
@@ -173,7 +184,7 @@ a {
     -moz-border-radius: 9px;
     border-radius: 9px;
     font-size: 14px;
-    font-weight: bold;
+    /* font-weight: bold; */
     background: var(--secondary-color);
     color: #fff;
     padding: 0 5px;

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
 import { useGlobalContext } from "../Context/Context";
+import { useAuthContext } from "../Context/AuthContext";
 import StyledTextField from "./InputComponent/StyledTextField";
 
 import { validateLoginForm } from "../Validators/LoginValidator";
+
+import { toast } from "react-toastify";
+import axios from "axios";
 
 import googleIcon from "../Images/Icons/googleIcon.png";
 import loginImage from "../Images/UtiltiyImages/loginModalImage.png";
@@ -11,10 +15,8 @@ import loginImage from "../Images/UtiltiyImages/loginModalImage.png";
 import "./LoginModal.css";
 const LoginModal = () => {
   const [formValues, setFormValues] = useState({
-    name: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const [errors, setErrors] = useState({
@@ -24,7 +26,10 @@ const LoginModal = () => {
     confirmPassword: "",
   });
 
-  const { storeName, openModal, openSignUpModal } = useGlobalContext();
+  const { storeName, openModal, closeModal, openSignUpModal } =
+    useGlobalContext();
+
+  const { loginUserVerifier, logoutUserVerifier } = useAuthContext();
 
   const handleSinUpModal = () => {
     openSignUpModal();
@@ -40,6 +45,51 @@ const LoginModal = () => {
     setErrors(errors);
   };
 
+  const hasErrors = () => {
+    return Object.values(errors).some((error) => error !== "");
+  };
+
+  const loginUserHandler = async (e) => {
+    e.preventDefault();
+
+    const loginUser = {
+      email: formValues.email,
+      password: formValues.password,
+    };
+
+    await axios
+      .post(
+        `${process.env.REACT_APP_BACKEND_BASER_URL}/api/users/login`,
+        loginUser
+      )
+      .then((response) => {
+        loginUserVerifier(
+          response.data.user.id,
+          response.data.token,
+          response.data.user
+        );
+
+        let res = "Successful: " + response.data.message;
+        toast.success(res, {
+          position: "top-center",
+          theme: "colored",
+        });
+
+        closeModal();
+      })
+      .catch((error) => {
+        let err =
+          "Error Occurred: " +
+          error.response.status +
+          " " +
+          error.response.data.message;
+        toast.error(err, {
+          position: "top-center",
+          theme: "colored",
+        });
+      });
+  };
+
   return (
     <>
       <div className="loginModal">
@@ -51,7 +101,7 @@ const LoginModal = () => {
             <h5 className="LoginModalHeading">
               Login and Get access to your Orders, Wishlist and Recommendations.
             </h5>
-            <form action="" method="post">
+            <form onSubmit={loginUserHandler}>
               <StyledTextField
                 label="Email"
                 type="email"
@@ -71,7 +121,11 @@ const LoginModal = () => {
                 helperText={errors.password}
               />
 
-              <button className="loginButton" type="submit">
+              <button
+                className="loginButton"
+                type="submit"
+                disabled={hasErrors()}
+              >
                 Login
               </button>
             </form>
