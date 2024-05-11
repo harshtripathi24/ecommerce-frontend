@@ -66,7 +66,6 @@ const SignUpModal = () => {
         closeSignUpModel();
       })
       .catch((error) => {
-        console.log("Error Below");
         console.log(error);
 
         let err =
@@ -130,8 +129,7 @@ const SignUpModal = () => {
                 error={!!errors.confirmPassword}
                 helperText={errors.confirmPassword}
               />
-              {console.log(errors.confirmPassword)}
-              {console.log(!!errors.confirmPassword)}
+
               <button
                 className="loginButton"
                 type="submit"

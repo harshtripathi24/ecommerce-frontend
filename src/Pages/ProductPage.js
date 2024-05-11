@@ -19,9 +19,6 @@ import Reviews from "../Components/ReviewSection/Reviews";
 const ProductPage = () => {
   const { pid } = useParams();
 
-  // converting pid string to intiger;
-  const productID = Number(pid);
-
   // let reviewCount = currentProduct.review.length;
 
   const [heroImage, setHeroImage] = useState([]);
@@ -33,7 +30,7 @@ const ProductPage = () => {
   const [averageStars, setAverageStars] = useState(0);
   const [totalReviews, setTotalReviews] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const { closeNav } = useGlobalContext();
+  const { closeNav, openLoginModal } = useGlobalContext();
 
   const { userToken, currentUser, loginAuthContext } = useAuthContext();
 
@@ -134,6 +131,7 @@ const ProductPage = () => {
           });
         });
     } else {
+      openLoginModal();
     }
   };
 
@@ -258,7 +256,6 @@ const ProductPage = () => {
   } else {
     return (
       <>
-        {console.log("Average Stars", +averageStars)}
         <div className="productPage">
           <div className="upperDiv">
             <p className="productName">{product.name}</p>
@@ -388,7 +385,7 @@ const ProductPage = () => {
                   min={1}
                   onChange={handleQuantityChange}
                 />
-                {console.log("Current Quantity: " + currentQuantity)}
+
                 <button onClick={handleAddToCart} className="addToCart">
                   + Add to Cart
                 </button>

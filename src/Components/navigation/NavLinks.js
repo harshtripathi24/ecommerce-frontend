@@ -80,7 +80,7 @@ const ProductLinks = [
   },
   {
     id: 8,
-    categoryName: "Romantic Novels",
+    categoryName: "Romance",
     childOptions: ["Love Unscripted", "It Ends With Us"],
   },
 ];

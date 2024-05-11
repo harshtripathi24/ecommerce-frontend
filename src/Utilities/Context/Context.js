@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [searchedProducts, setSearchedProducts] = useState({});
 
   const openNav = () => {
     setIsNavOpen(true);
@@ -23,12 +24,10 @@ const AppProvider = ({ children }) => {
 
   const openModal = () => {
     setIsModalOpen(true);
-    console.log("Modal Opened");
   };
 
   const openQuickView = () => {
     setIsQuickViewOpen(true);
-    console.log("QuickView Opened");
   };
   const closeQuickView = () => {
     setIsQuickViewOpen(false);
@@ -106,6 +105,8 @@ const AppProvider = ({ children }) => {
         isFilterOpen,
         openFilterModal,
         closeFilterModal,
+        searchedProducts,
+        setSearchedProducts,
       }}
     >
       {children}

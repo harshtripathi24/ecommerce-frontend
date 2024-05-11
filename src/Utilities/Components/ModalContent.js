@@ -18,6 +18,7 @@ const ModalContent = () => {
     isReviewModalOpen,
     isFilterOpen,
     isSignUpModalOpen,
+    searchedProducts,
   } = useGlobalContext();
 
   // useEffect(() => {
@@ -32,7 +33,7 @@ const ModalContent = () => {
       {isQuickViewOpen && <ProductQucikView />}
       {isLoginModalOpen && <LoginModal />}
       {isReviewModalOpen && <WriteReviewModal2 />}
-      {isFilterOpen && <FilterModal />}
+      {isFilterOpen && <FilterModal productsData={searchedProducts} />}
       {isSignUpModalOpen && <SignUpModal />}
     </>
   );

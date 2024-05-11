@@ -20,15 +20,9 @@ const Reviews = ({ currentProduct }) => {
   const { openReviewModal, openModal } = useGlobalContext();
 
   const handleWriteReview = () => {
-    console.log("WriteReview Clicked");
     openReviewModal();
     openModal();
   };
-
-  console.log("Product From Review below ");
-  console.log(currentProduct);
-
-  console.log(averageStar);
 
   return (
     <>

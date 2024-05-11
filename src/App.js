@@ -18,9 +18,11 @@ import NotFoundPage from "./Pages/NotFoundPage";
 import TermAndConditionPage from "./Pages/TermAndConditionPage.js";
 import PrivacyPolicy from "./Pages/PrivacyPolicy.js";
 import SearchedPage from "./Pages/SearchedPage.js";
+import WishList from "./Pages/WishList.js";
 
 import { useAuth } from "./Utilities/Hooks/useAuth.js";
 import { useEffect } from "react";
+import CartPage from "./Pages/CartPage.js";
 
 function App() {
   const { token, login, logout, userId } = useAuth();
@@ -61,12 +63,10 @@ function App() {
     }
   }, [token]);
 
-  return (
-    <>
-      <Header />
-      <Modal>
-        <ModalContent />
-      </Modal>
+  let routes;
+
+  if (token) {
+    routes = (
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:pid" element={<ProductPage />} />
@@ -75,9 +75,35 @@ function App() {
         <Route path="/FAQ" element={<FAQPage />} />
         <Route path="/term_and_conditions" element={<TermAndConditionPage />} />
         <Route path="/privacy_policy" element={<PrivacyPolicy />} />
-        <Route path="/searched_page" element={<SearchedPage />} />
+        <Route path="/searched_page/:tagName" element={<SearchedPage />} />
+        <Route path="/wishlist" element={<WishList />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+    );
+  } else {
+    routes = (
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:pid" element={<ProductPage />} />
+        <Route path="/contact_us" element={<ContactUsPage />} />
+        <Route path="/about_us" element={<AboutUsPage />} />
+        <Route path="/FAQ" element={<FAQPage />} />
+        <Route path="/term_and_conditions" element={<TermAndConditionPage />} />
+        <Route path="/privacy_policy" element={<PrivacyPolicy />} />
+        <Route path="/searched_page/:tagName" element={<SearchedPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    );
+  }
+
+  return (
+    <>
+      <Header />
+      <Modal>
+        <ModalContent />
+      </Modal>
+      {routes}
       <ToastContainer />
       <Footer />
     </>

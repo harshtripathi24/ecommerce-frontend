@@ -11,7 +11,6 @@ const AuthProvider = ({ children }) => {
   const { login, logout } = useAuth();
 
   const loginUserVerifier = (uid, token, user) => {
-    console.log("hua kuch bhai");
     login(uid, token);
 
     setCurrentUser(user);

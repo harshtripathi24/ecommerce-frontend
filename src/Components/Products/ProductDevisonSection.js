@@ -11,9 +11,9 @@ import MoonLoader from "react-spinners/MoonLoader";
 import "./ProductDevisionSection.css";
 const ProductDevisonSection = ({
   sectionType,
-  productIds,
   devisonTitle,
   tagName,
+  productsData,
 }) => {
   const [products, setProducts] = useState(Products);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -25,30 +25,35 @@ const ProductDevisonSection = ({
   useEffect(() => {
     setIsLoaded(false);
 
-    axios
-      .post(`${process.env.REACT_APP_BACKEND_BASER_URL}/api/tags/show-tag`, {
-        tag: tagName,
-      })
-      .then((response) => {
-        setProducts(response.data);
-        setIsLoaded(true);
+    if (tagName) {
+      axios
+        .post(`${process.env.REACT_APP_BACKEND_BASER_URL}/api/tags/show-tag`, {
+          tag: tagName,
+        })
+        .then((response) => {
+          setProducts(response.data);
+          setIsLoaded(true);
 
-        // setIsLoaded(true);
-      })
-      .catch((error) => {
-        setIsLoaded(false);
+          // setIsLoaded(true);
+        })
+        .catch((error) => {
+          setIsLoaded(false);
 
-        let err =
-          "Error Occurred: " +
-          error.response.status +
-          " " +
-          error.response.data.message;
-        toast.error(err, {
-          position: "top-center",
-          theme: "colored",
+          let err =
+            "Error Occurred: " +
+            error.response.status +
+            " " +
+            error.response.data.message;
+          toast.error(err, {
+            position: "top-center",
+            theme: "colored",
+          });
         });
-      });
-  }, []);
+    } else if (productsData) {
+      setProducts(productsData);
+      setIsLoaded(true);
+    }
+  }, [productsData, tagName]);
 
   return (
     <>

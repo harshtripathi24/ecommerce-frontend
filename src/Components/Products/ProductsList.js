@@ -7,13 +7,19 @@ const ProductsList = ({ products }) => {
   return (
     <div className="products">
       {products.map((product) => {
-        return (
-          <SingleProduct
-            id={product.Product.id}
-            key={product.Product.id}
-            product={product.Product}
-          />
-        );
+        if (product.Product) {
+          return (
+            <SingleProduct
+              id={product.Product.id}
+              key={product.Product.id}
+              product={product.Product}
+            />
+          );
+        } else {
+          return (
+            <SingleProduct id={product.id} key={product.id} product={product} />
+          );
+        }
       })}
       <ReactTooltip
         id="tool-tip-basket"
