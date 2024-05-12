@@ -5,6 +5,7 @@ import PriceIcon from "../Utilities/Smaller Component/PriceIcon";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { FaHeart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./WishList.css";
 import { useGlobalContext } from "../Utilities/Context/Context";
 import emptyCartImg from "../Utilities/Images/UtiltiyImages/emptyCart.png";
@@ -12,10 +13,15 @@ const WishList = () => {
   const [itemsQuantity, setItemsQuantity] = useState({});
   const [wishList, setWishList] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const navigate = useNavigate();
   const { closeNav, openLoginModal } = useGlobalContext();
 
   const { userToken, currentUser, loginAuthContext } = useAuthContext();
 
+  const handleHomeClick = () => {
+    navigate("/");
+  };
   const handleItemsQuantity = (e, id) => {
     let value = parseInt(e.target.value);
 
@@ -112,8 +118,6 @@ const WishList = () => {
         .then((response) => {
           getLogin(currentUser.id, userToken);
 
-          console.log(response);
-
           let res = "Successful: " + response.data.message;
           toast.success(res, {
             position: "top-center",
@@ -153,7 +157,7 @@ const WishList = () => {
 
       setItemsQuantity(itemQuan);
     }
-  }, [currentUser]);
+  }, [currentUser, wishList]);
 
   useEffect(() => {
     closeNav();
@@ -241,7 +245,9 @@ const WishList = () => {
             <h4 className="emptyText">
               Empty Wishlist please Add Some Products
             </h4>
-            <button className="homeBtn">Back to Home</button>
+            <button onClick={() => handleHomeClick()} className="homeBtn">
+              Back to Home
+            </button>
           </div>
         </div>
       )}
