@@ -4,11 +4,12 @@ import { Dropdown, Avatar } from "rsuite";
 
 import { useAuthContext } from "../../Utilities/Context/AuthContext";
 import "./UserProfile.css";
-
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { red } from "@mui/material/colors";
 
 const UserProfile = () => {
+  const navigate = useNavigate();
+
   const mainColor = getComputedStyle(document.documentElement)
     .getPropertyValue("--primary-color")
     .trim();
@@ -21,6 +22,12 @@ const UserProfile = () => {
 
   const handleSingOut = () => {
     logoutUserVerifier();
+
+    navigate(0);
+  };
+
+  const handleWishList = () => {
+    navigate("/wishList");
   };
 
   return (
@@ -31,7 +38,9 @@ const UserProfile = () => {
           <strong>{currentUser.name}</strong>
         </Dropdown.Item>
         <Dropdown.Separator />
-        <Dropdown.Item>Your Wishlist</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleWishList()}>
+          Your Wishlist
+        </Dropdown.Item>
         <Dropdown.Item>Update Address</Dropdown.Item>
         <Dropdown.Item>Change Password</Dropdown.Item>
         <Dropdown.Separator />
@@ -49,7 +58,7 @@ const UserProfile = () => {
           </Link>
         </Dropdown.Item>
         <Dropdown.Item>
-          <p onClick={logoutUserVerifier} className="signOutLink">
+          <p onClick={() => handleSingOut()} className="signOutLink">
             Sign out
           </p>
         </Dropdown.Item>

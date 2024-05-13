@@ -7,26 +7,19 @@ import { useGlobalContext } from "../Context/Context";
 import "./ModalContent.css";
 import FilterModal from "./FilterModal";
 import SignUpModal from "./SignUpModal";
+import UpdateAddressModal from "./UpdateAddressModal";
 
 const ModalContent = () => {
   const {
     isQuickViewOpen,
-    closeQuickView,
+
     isLoginModalOpen,
-    closeLoginModal,
-    isModalOpen,
+    isUpdateAddressModalOpen,
     isReviewModalOpen,
     isFilterOpen,
     isSignUpModalOpen,
     searchedProducts,
   } = useGlobalContext();
-
-  // useEffect(() => {
-  //   if (!isModalOpen) {
-  //     closeQuickView();
-  //     closeLoginModal();
-  //   }
-  // }, [isModalOpen]);
 
   return (
     <>
@@ -35,6 +28,7 @@ const ModalContent = () => {
       {isReviewModalOpen && <WriteReviewModal2 />}
       {isFilterOpen && <FilterModal productsData={searchedProducts} />}
       {isSignUpModalOpen && <SignUpModal />}
+      {isUpdateAddressModalOpen && <UpdateAddressModal />}
     </>
   );
 };

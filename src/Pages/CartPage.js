@@ -15,7 +15,7 @@ const CartPage = () => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const navigate = useNavigate();
-  const { closeNav, openLoginModal } = useGlobalContext();
+  const { closeNav, openModal, openAddressModal } = useGlobalContext();
 
   const { userToken, currentUser, loginAuthContext } = useAuthContext();
 
@@ -97,8 +97,6 @@ const CartPage = () => {
             theme: "colored",
           });
         });
-    } else {
-      openLoginModal();
     }
   };
 
@@ -135,9 +133,14 @@ const CartPage = () => {
             theme: "colored",
           });
         });
-    } else {
-      openLoginModal();
     }
+  };
+
+  const handleCartCheckOut = (e) => {
+    e.preventDefault();
+
+    openModal();
+    openAddressModal();
   };
 
   useEffect(() => {
@@ -275,7 +278,12 @@ const CartPage = () => {
               </span>
             </h3>
 
-            <button className="checkoutBtn">Check Out</button>
+            <button
+              onClick={(e) => handleCartCheckOut(e)}
+              className="checkoutBtn"
+            >
+              Check Out
+            </button>
           </div>
         </div>
       ) : (

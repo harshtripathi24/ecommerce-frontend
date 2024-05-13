@@ -12,12 +12,14 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import "./header.css";
 import { useGlobalContext } from "../../Utilities/Context/Context";
-
+import { useNavigate } from "react-router-dom";
 import UserProfile from "../ProfileContainer/UserProfile";
 
 const Header = () => {
   const [cartItem, setCartItem] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const navigate = useNavigate();
 
   const detectWindowWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -35,6 +37,14 @@ const Header = () => {
   const handleSinUpModal = () => {
     openSignUpModal();
     openModal();
+  };
+
+  const handleCart = () => {
+    if (userToken) {
+      navigate("/cart");
+    } else {
+      handleLoginModal();
+    }
   };
 
   useEffect(() => {
@@ -91,7 +101,7 @@ const Header = () => {
             </div>
           )}
 
-          <div className="cart-container">
+          <div onClick={() => handleCart()} className="cart-container">
             <AiOutlineShoppingCart className="cart" />
 
             <span className="cartItems-total">{cartItem}</span>

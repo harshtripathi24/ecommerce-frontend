@@ -8,7 +8,7 @@ import { validateLoginForm } from "../Validators/LoginValidator";
 
 import { toast } from "react-toastify";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 import googleIcon from "../Images/Icons/googleIcon.png";
 import loginImage from "../Images/UtiltiyImages/loginModalImage.png";
 
@@ -25,6 +25,8 @@ const LoginModal = () => {
     password: "",
     confirmPassword: "",
   });
+
+  const navigate = useNavigate();
 
   const { storeName, openModal, closeModal, openSignUpModal } =
     useGlobalContext();
@@ -68,6 +70,8 @@ const LoginModal = () => {
           response.data.token,
           response.data.user
         );
+
+        navigate(0);
 
         let res = "Successful: " + response.data.message;
         toast.success(res, {

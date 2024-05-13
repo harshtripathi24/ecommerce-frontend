@@ -90,6 +90,7 @@ a {
   height: 30px;
   margin-top: 10px;
   margin-right: 0.6em;
+  cursor: pointer;
 }
 
 .cartItems-total {

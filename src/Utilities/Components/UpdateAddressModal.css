@@ -1,0 +1,11 @@
+.addressModalContainer {
+  width: 100%;
+}
+
+.addressModalContainer .updateDiv {
+  margin-top: 35px;
+}
+
+.addressModalContainer .updateDiv .addressModalHeading {
+  color: var(--primary-color);
+}

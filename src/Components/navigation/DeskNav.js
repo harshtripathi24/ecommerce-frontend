@@ -30,8 +30,8 @@ export const deskNavlinks = [
   },
 
   {
-    name: "Wishlist",
-    url: "",
+    name: "Privacy",
+    url: "/privacy_policy",
   },
 ];
 
