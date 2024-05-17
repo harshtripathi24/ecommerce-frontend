@@ -8,6 +8,7 @@ import "./ModalContent.css";
 import FilterModal from "./FilterModal";
 import SignUpModal from "./SignUpModal";
 import UpdateAddressModal from "./UpdateAddressModal";
+import ChangePasswordModal from "./ChangePasswordModal";
 
 const ModalContent = () => {
   const {
@@ -19,6 +20,7 @@ const ModalContent = () => {
     isFilterOpen,
     isSignUpModalOpen,
     searchedProducts,
+    isChangePasswordModalOpen,
   } = useGlobalContext();
 
   return (
@@ -29,6 +31,7 @@ const ModalContent = () => {
       {isFilterOpen && <FilterModal productsData={searchedProducts} />}
       {isSignUpModalOpen && <SignUpModal />}
       {isUpdateAddressModalOpen && <UpdateAddressModal />}
+      {isChangePasswordModalOpen && <ChangePasswordModal />}
     </>
   );
 };

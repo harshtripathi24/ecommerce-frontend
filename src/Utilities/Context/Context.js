@@ -12,6 +12,9 @@ const AppProvider = ({ children }) => {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   const [isUpdateAddressModalOpen, setIsUpdateAddressModalOpen] =
     useState(false);
+
+  const [isChangePasswordModalOpen, setIsChangePasswordModalOpen] =
+    useState(false);
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [searchedProducts, setSearchedProducts] = useState({});
@@ -75,6 +78,14 @@ const AppProvider = ({ children }) => {
     setIsUpdateAddressModalOpen(false);
   };
 
+  const openChangePasswordModal = () => {
+    setIsChangePasswordModalOpen(true);
+  };
+
+  const closeChangePasswordModal = () => {
+    setIsChangePasswordModalOpen(false);
+  };
+
   const closeModal = () => {
     setIsModalOpen(false);
     setTimeout(() => {
@@ -84,6 +95,7 @@ const AppProvider = ({ children }) => {
       closeReviewModal();
       closeFilterModal();
       closeAddressModal();
+      closeChangePasswordModal();
     }, 500);
   };
 
@@ -121,6 +133,9 @@ const AppProvider = ({ children }) => {
         isUpdateAddressModalOpen,
         openAddressModal,
         closeAddressModal,
+        isChangePasswordModalOpen,
+        openChangePasswordModal,
+        closeChangePasswordModal,
       }}
     >
       {children}

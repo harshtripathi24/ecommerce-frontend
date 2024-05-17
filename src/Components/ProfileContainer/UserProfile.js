@@ -6,9 +6,13 @@ import { useAuthContext } from "../../Utilities/Context/AuthContext";
 import "./UserProfile.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../../Utilities/Context/Context";
 
 const UserProfile = () => {
   const navigate = useNavigate();
+
+  const { openModal, openAddressModal, openChangePasswordModal } =
+    useGlobalContext();
 
   const mainColor = getComputedStyle(document.documentElement)
     .getPropertyValue("--primary-color")
@@ -30,6 +34,16 @@ const UserProfile = () => {
     navigate("/wishList");
   };
 
+  const handleUpdateAddress = () => {
+    openAddressModal();
+    openModal();
+  };
+
+  const handleChangePassword = () => {
+    openChangePasswordModal();
+    openModal();
+  };
+
   return (
     <>
       <Dropdown renderToggle={renderToggle}>
@@ -41,8 +55,12 @@ const UserProfile = () => {
         <Dropdown.Item onClick={() => handleWishList()}>
           Your Wishlist
         </Dropdown.Item>
-        <Dropdown.Item>Update Address</Dropdown.Item>
-        <Dropdown.Item>Change Password</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleUpdateAddress()}>
+          Update Address
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleChangePassword()}>
+          Change Password
+        </Dropdown.Item>
         <Dropdown.Separator />
         <Dropdown.Item>
           <Link to={`${process.env.REACT_APP_BASE_URL}/FAQ`} target="_blank">
