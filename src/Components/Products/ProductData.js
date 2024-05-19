@@ -523,7 +523,7 @@ const Products = [
   {
     pid: 17,
     categoryName: ["Horror", "Featured Products"],
-    author: "NIck Thornton",
+    author: "Nick Thornton",
     name: "The Last Chance Hotel",
     price: "385",
     fakePrice: "460",

@@ -71,7 +71,7 @@
   font-weight: 400;
 }
 
-.right .addDiv button {
+.right .addDiv .submitBtn {
   height: 40px;
   background-color: var(--primary-color);
   color: var(--background-color);
@@ -82,9 +82,10 @@
   border: none;
   width: 50%;
   margin-left: 12px;
+  border-radius: 6px;
 }
 
-button:hover {
+.right .addDiv .submitBtn:hover {
   cursor: pointer;
   opacity: 90%;
 }
@@ -139,5 +140,10 @@ button:hover {
 
   .right .descriptionDiv {
     height: fit-content;
+  }
+
+  .right .addDiv .submitBtn {
+    height: 50px;
+    border-radius: 9px;
   }
 }

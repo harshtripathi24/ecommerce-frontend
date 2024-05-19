@@ -1,0 +1,152 @@
+.FilterModalMain {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--background-color);
+  border: 2px var(--primary-color) solid;
+  border-radius: 9px;
+  padding: 5px;
+  max-width: var(--fixed-width);
+  gap: 1rem 2rem;
+
+  width: 75vw;
+}
+
+.FilterModalMain .FormDiv {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+}
+
+.FilterModalMain .FormDiv .filterHeader {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.FilterModalMain .FormDiv .filterGroup label {
+  font-weight: 600;
+}
+
+.FilterModalMain .FormDiv .filterGroup .starClass {
+  font-size: 10px;
+}
+
+.FilterModalMain .FormDiv .submitBtn {
+  background-color: var(--primary-color);
+
+  color: var(--background-color);
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 25px;
+  padding: 9px;
+  border: none;
+  border-radius: 9px;
+}
+
+.FilterModalMain .FormDiv .submitBtn:hover {
+  cursor: pointer;
+}
+
+.FilterModalMain .filterGroup .multi-range-slider {
+  display: flex;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 10px;
+  box-shadow: none;
+  flex-direction: column;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.FilterModalMain .filterGroup .multi-range-slider .bar-inner {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: space-between;
+  position: relative;
+  border: none;
+  justify-content: space-between;
+  box-shadow: none;
+}
+
+.FilterModalMain .FormDiv .filterGroup .multi-range-slider .thumb::before {
+  content: "";
+  background-color: inherit;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: solid 1px var(--font-color-primary);
+  box-shadow: none;
+  border-radius: 50%;
+  z-index: 1;
+  margin: -5px -10px;
+  cursor: grab;
+}
+
+.FilterModalMain .FormDiv .filterGroup .multi-range-slider .thumb .caption * {
+  position: absolute;
+  min-width: 20px;
+  height: 20px;
+  font-size: 75%;
+  text-align: center;
+  line-height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  color: var(--background-color);
+  box-shadow: 0px 0px 5px black;
+  padding: 0px 5px;
+  white-space: nowrap;
+}
+
+.FilterModalMain .FormDiv .filterGroup .multi-range-slider .ruler {
+  margin: 10px 0px -5px;
+  display: flex;
+  /* display: none; */
+  height: 5px;
+  overflow: hidden;
+}
+
+.FilterModalMain .FormDiv .filterGroup .multi-range-slider .ruler .ruler-rule {
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 5px 0;
+}
+
+.FilterModalMain .FormDiv .filterGroup .multi-range-slider .label {
+  font-weight: normal;
+  display: flex;
+  font-size: 80%;
+  justify-content: center;
+  width: 1px;
+}
+
+.FilterModalMain .FormDiv .filterGroup .priceSelect {
+  width: 70px;
+  margin: 8px;
+  margin-top: 4px;
+
+  padding-left: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 110%;
+  background-position-y: -5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  /* margin-right: 2rem; */
+}

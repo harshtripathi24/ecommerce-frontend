@@ -10,7 +10,7 @@ const Reviews = ({ currentProduct }) => {
   let totalStar = 0;
   let totalReview = 0;
 
-  currentProduct.review.map((rev) => {
+  currentProduct.Reviews.map((rev) => {
     totalStar += rev.stars;
     totalReview += 1;
   });
@@ -20,19 +20,16 @@ const Reviews = ({ currentProduct }) => {
   const { openReviewModal, openModal } = useGlobalContext();
 
   const handleWriteReview = () => {
-    console.log("WriteReview Clicked");
     openReviewModal();
     openModal();
   };
-
-  console.log(averageStar);
 
   return (
     <>
       <div className="reviews">
         <div className="reviewHeader">
           <div className="allReview">
-            <h4>Cutomer Reviews</h4>
+            <h4>Customer Reviews</h4>
             <div className="stars">
               <ReviewStars showStar={averageStar} />
             </div>
@@ -45,7 +42,7 @@ const Reviews = ({ currentProduct }) => {
           </button>
         </div>
         <div className="reviewList">
-          {currentProduct.review.map((rev) => {
+          {currentProduct.Reviews.map((rev) => {
             return (
               <div className="singleReview">
                 <div className="titleDiv">

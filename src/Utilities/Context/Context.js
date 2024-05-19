@@ -9,7 +9,15 @@ const AppProvider = ({ children }) => {
   const [product, setProduct] = useState({});
 
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+  const [isUpdateAddressModalOpen, setIsUpdateAddressModalOpen] =
+    useState(false);
+
+  const [isChangePasswordModalOpen, setIsChangePasswordModalOpen] =
+    useState(false);
   const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [searchedProducts, setSearchedProducts] = useState({});
 
   const openNav = () => {
     setIsNavOpen(true);
@@ -21,12 +29,10 @@ const AppProvider = ({ children }) => {
 
   const openModal = () => {
     setIsModalOpen(true);
-    console.log("Modal Opened");
   };
 
   const openQuickView = () => {
     setIsQuickViewOpen(true);
-    console.log("QuickView Opened");
   };
   const closeQuickView = () => {
     setIsQuickViewOpen(false);
@@ -39,8 +45,16 @@ const AppProvider = ({ children }) => {
     setLoginModalOpen(false);
   };
 
+  const openSignUpModal = () => {
+    closeLoginModal();
+
+    setIsSignUpModalOpen(true);
+  };
+  const closeSignUpModel = () => {
+    setIsSignUpModalOpen(false);
+  };
+
   const openReviewModal = () => {
-    console.log("Review Modal Opened");
     setIsReviewModalOpen(true);
   };
 
@@ -48,12 +62,41 @@ const AppProvider = ({ children }) => {
     setIsReviewModalOpen(false);
   };
 
+  const openFilterModal = () => {
+    setIsFilterOpen(true);
+  };
+
+  const closeFilterModal = () => {
+    setIsFilterOpen(false); //
+  };
+
+  const openAddressModal = () => {
+    setIsUpdateAddressModalOpen(true);
+  };
+
+  const closeAddressModal = () => {
+    setIsUpdateAddressModalOpen(false);
+  };
+
+  const openChangePasswordModal = () => {
+    setIsChangePasswordModalOpen(true);
+  };
+
+  const closeChangePasswordModal = () => {
+    setIsChangePasswordModalOpen(false);
+  };
+
   const closeModal = () => {
     setIsModalOpen(false);
     setTimeout(() => {
       closeQuickView();
       closeLoginModal();
-    }, 1000);
+      closeSignUpModel();
+      closeReviewModal();
+      closeFilterModal();
+      closeAddressModal();
+      closeChangePasswordModal();
+    }, 500);
   };
 
   const storeName = "Smart Books";
@@ -70,6 +113,9 @@ const AppProvider = ({ children }) => {
         isLoginModalOpen,
         openLoginModal,
         closeLoginModal,
+        isSignUpModalOpen,
+        openSignUpModal,
+        closeSignUpModel,
         product,
         setProduct,
         storeName,
@@ -79,6 +125,17 @@ const AppProvider = ({ children }) => {
         openReviewModal,
         closeReviewModal,
         isReviewModalOpen,
+        isFilterOpen,
+        openFilterModal,
+        closeFilterModal,
+        searchedProducts,
+        setSearchedProducts,
+        isUpdateAddressModalOpen,
+        openAddressModal,
+        closeAddressModal,
+        isChangePasswordModalOpen,
+        openChangePasswordModal,
+        closeChangePasswordModal,
       }}
     >
       {children}

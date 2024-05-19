@@ -40,12 +40,13 @@ const Home = () => {
       <ProductsSection />
       <ProductDevisonSection
         sectionType={1}
-        productIds={[8, 5, 4, 3, 16]}
+        tagName={"Self Help"}
         devisonTitle={"Deal of the Day above 20% off Special offer"}
       />
       <ProductDevisonSection
         sectionType={2}
         productIds={[3, 20, 17, 14, 15]}
+        tagName={"Most Viewed"}
         devisonTitle={"Best Seller"}
       />
       <BannerSection>
@@ -63,7 +64,7 @@ const Home = () => {
       </BannerSection>
       <ProductDevisonSection
         sectionType={2}
-        productIds={[20, 13, 14, 17, 11]}
+        tagName={"Thriller"}
         devisonTitle={"Trending Now"}
       />
 
@@ -74,7 +75,7 @@ const Home = () => {
       />
       <ProductDevisonSection
         sectionType={2}
-        productIds={[12, 8, 19, 13, 20]}
+        tagName={"Romance"}
         devisonTitle={"Lovley Books"}
       />
       <ProductPublisherSection />

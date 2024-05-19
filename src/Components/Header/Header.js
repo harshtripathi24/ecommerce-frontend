@@ -5,17 +5,46 @@ import { FaHeadphonesAlt } from "react-icons/fa";
 import Search from "./Search";
 import MainNaviagtion from "../navigation/MainNaviagtion";
 import DeskNav from "../navigation/DeskNav";
+import { useAuthContext } from "../../Utilities/Context/AuthContext";
 
 import logo from "../../Utilities/Images/header-logo.png";
-
+import { toast } from "react-toastify";
+import axios from "axios";
 import "./header.css";
+import { useGlobalContext } from "../../Utilities/Context/Context";
+import { useNavigate } from "react-router-dom";
+import UserProfile from "../ProfileContainer/UserProfile";
 
 const Header = () => {
   const [cartItem, setCartItem] = useState(0);
-  const [windoWidth, setWindoWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const navigate = useNavigate();
 
   const detectWindowWidth = () => {
-    setWindoWidth(window.innerWidth);
+    setWindowWidth(window.innerWidth);
+  };
+
+  const { openModal, openLoginModal, openSignUpModal } = useGlobalContext();
+
+  const { userToken, currentUser } = useAuthContext();
+
+  const handleLoginModal = () => {
+    openLoginModal();
+    openModal();
+  };
+
+  const handleSinUpModal = () => {
+    openSignUpModal();
+    openModal();
+  };
+
+  const handleCart = () => {
+    if (userToken) {
+      navigate("/cart");
+    } else {
+      handleLoginModal();
+    }
   };
 
   useEffect(() => {
@@ -24,13 +53,21 @@ const Header = () => {
     return () => {
       window.removeEventListener("resize ", detectWindowWidth);
     };
-  }, [windoWidth]);
+  }, [windowWidth]);
+
+  useEffect(() => {
+    if (userToken) {
+      setCartItem(currentUser.CartLists.length);
+    } else {
+      setCartItem(0);
+    }
+  }, [userToken, currentUser]);
 
   return (
     <div className="mainHeader">
       <div className="header">
         <div className="leftHeader">
-          {windoWidth < 1232 ? <MainNaviagtion /> : ""}
+          {windowWidth < 1232 ? <MainNaviagtion /> : ""}
           <div className="logo-div">
             <a
               className="homeAnchor"
@@ -42,25 +79,36 @@ const Header = () => {
         </div>
 
         <div className="middleHeader">
-          {windoWidth > 1232 ? <Search /> : ""}
+          {windowWidth > 1232 ? <Search /> : ""}
         </div>
 
         <div className="rightHeader">
-          <div className="signin-div">
-            <a href="http://">
-              <span>Sign in</span>
-            </a>
-            <br />
-            or <a href="http://">Register</a>
-          </div>
-          <div className="cart-container">
+          {!userToken && (
+            <>
+              <div className="signin-div">
+                <a onClick={() => handleLoginModal()}>
+                  <span>Sign in</span>
+                </a>
+                <br />
+                or <a onClick={() => handleSinUpModal()}>Register</a>
+              </div>
+            </>
+          )}
+
+          {userToken && (
+            <div className="profileDiv">
+              <UserProfile />
+            </div>
+          )}
+
+          <div onClick={() => handleCart()} className="cart-container">
             <AiOutlineShoppingCart className="cart" />
 
             <span className="cartItems-total">{cartItem}</span>
           </div>
         </div>
       </div>
-      {windoWidth < 1232 ? <Search /> : ""}
+      {windowWidth < 1232 ? <Search /> : ""}
 
       <DeskNav />
     </div>

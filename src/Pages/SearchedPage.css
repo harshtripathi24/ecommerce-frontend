@@ -1,0 +1,63 @@
+.SearchedPageMain {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+  background: var(--background-color);
+  padding: 2.5rem 2rem;
+  max-width: var(--fixed-width);
+  gap: 1rem 2rem;
+
+  margin-top: 20px;
+}
+
+.SearchedPageMain .filterDiv .filterBtn {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 3px;
+  width: 94px;
+  height: 34px;
+  border-radius: 9px;
+}
+
+@media only screen and (min-width: 1232px) {
+  .SearchedPageMain {
+    width: 90vw;
+
+    max-width: 90vw;
+
+    padding: 4px;
+
+    flex-direction: row;
+    gap: none;
+
+    border: 2px var(--primary-color) solid;
+    border-radius: 9px;
+  }
+
+  .SearchedPageMain .Products {
+    /* border: 2px red solid; */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .SearchedPageMain .deskFilterDiv {
+    width: 22%;
+    /* border: 2px blue solid; */
+
+    max-width: 25%;
+  }
+
+  .SearchedPageMain .deskFilterDiv .FilterModalMain {
+    width: 100%;
+    border: none;
+    border: 4px var(--border-color-light) solid;
+  }
+
+  .SearchedPageMain .Products {
+    /* border: 2px red solid; */
+    width: 75%;
+    max-width: 75%;
+  }
+}

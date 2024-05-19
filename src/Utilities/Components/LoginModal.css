@@ -8,18 +8,18 @@
   flex-direction: row;
 }
 
-.leftDiv {
+.loginModal .leftDiv {
   width: 60%;
   display: flex;
 }
 
-.leftDiv img {
+.loginModal .leftDiv img {
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.rightDiv {
+.loginModal .rightDiv {
   height: 100%;
   /* border: 2px solid red; */
   display: flex;
@@ -28,7 +28,7 @@
   justify-content: center;
 }
 
-.LoginModalHeading {
+.loginModal .LoginModalHeading {
   width: 100%;
   margin-bottom: 30px;
   font-size: large;
@@ -37,7 +37,7 @@
   color: var(--primary-color);
 }
 
-.loginDiv {
+.loginModal .loginDiv {
   flex-direction: column;
   align-items: center;
   margin-top: auto;
@@ -63,7 +63,12 @@
   font-weight: 400;
 }
 
+.loginDiv .orOption {
+  display: none;
+}
+
 .googleButton {
+  display: none;
   width: 100%;
   border: none;
   padding: 5px;
@@ -85,10 +90,35 @@
   align-items: baseline;
 }
 
-.signUpDiv {
+.loginModal .rightDiv .signUpDiv {
   font-size: medium;
   font-weight: 600;
   margin-bottom: 8px;
   /* border: 1px blue solid; */
   /* margin-top: 4px; */
+}
+
+@media only screen and (max-width: 680px) {
+  .loginModal {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    height: fit-content;
+    padding-bottom: 12px;
+    /* border: 2px blue solid; */
+
+    margin-top: 10px;
+  }
+
+  .loginModal .leftDiv {
+    display: none;
+  }
+
+  .loginModal .rightDiv .signUpDiv {
+    font-size: medium;
+    font-weight: 600;
+    margin-bottom: 8px;
+    /* border: 1px blue solid; */
+    margin-top: 20px;
+  }
 }
